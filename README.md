@@ -2,7 +2,7 @@
 
 从史料和分镜做起，到旁白、双语字幕、程序化城市示意、视频与观看页交付。仓库包含一个可离线运行的入门示例，以及《上海 · 城市纪事》的关键制作源码和 V11 配音返修案例。
 
-[打开公众号文章 HTML](article/shanghai-city-documentary.html) · [上海案例与源码](references/shanghai.md) · [制作手册](references/workflow.md)
+[公众号实操教程：先用四个镜头拍明白一座桥](article/article.md) · [HTML 排版版](article/shanghai-city-documentary.html) · [上海案例与源码](references/shanghai.md) · [制作手册](references/workflow.md)
 
 ## 先做一部 24 秒短片
 
