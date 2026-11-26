@@ -1,8 +1,8 @@
 # 城市纪录片制作 Skill
 
-从史料和分镜做起，到旁白、双语字幕、程序化城市示意、视频与观看页交付。仓库包含一个可离线运行的入门示例，以及《上海 · 城市纪事》的关键制作源码和 V11 配音返修案例。
+从史料写出旁白稿，先定配音，再排分镜和双语字幕，最后导出视频与观看页。仓库包含一个可离线运行的入门示例，以及《上海 · 城市纪事》的关键制作源码和 V11 配音返修案例。
 
-[公众号实操教程：先用四个镜头拍明白一座桥](article/article.md) · [HTML 排版版](article/shanghai-city-documentary.html) · [上海案例与源码](references/shanghai.md) · [制作手册](references/workflow.md)
+[公众号快速上手：先写稿配音，再做画面](article/article.md) · [HTML 排版版](article/shanghai-city-documentary.html) · [上海案例与源码](references/shanghai.md) · [制作手册](references/workflow.md)
 
 ## 先做一部 24 秒短片
 
@@ -41,7 +41,7 @@ python -X utf8 scripts/build.py --project path/to/project.json --narration path/
 git clone https://github.com/dailyoozoo/city-documentary-skill.git .agents/skills/city-documentary-skill
 ```
 
-对 Codex 说：`用 $city-documentary-skill 为我的家乡做一段 30 秒城市纪录片，先交付来源清单和分镜。` 也可以让 Codex 根据自己的录音帮你整理时间轴或复查既有成片。
+分两次调用：第一次提供城市、主题、片长和来源，只写分句旁白。确认稿子后录成 `voice.wav`，标出每句开始和全段结束。第二次提供定稿、录音、句界和素材，请 Codex 按录音排镜头和双语字幕，再构建视频。两条可直接复制的提示词见[公众号教程](article/article.md)。
 
 ## 上海案例范围
 
