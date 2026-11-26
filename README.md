@@ -2,7 +2,7 @@
 
 从史料写出旁白稿，先定配音，再排分镜和双语字幕，最后导出视频与观看页。仓库包含一个可离线运行的入门示例，以及《上海 · 城市纪事》的关键制作源码和 V11 配音返修案例。
 
-[公众号快速上手：先写稿配音，再做画面](article/article.md) · [HTML 排版版](article/shanghai-city-documentary.html) · [上海案例与源码](references/shanghai.md) · [制作手册](references/workflow.md)
+[公众号教程：从主动查资料到出片](article/article.md) · [HTML 排版版](article/shanghai-city-documentary.html) · [上海案例与源码](references/shanghai.md) · [制作手册](references/workflow.md)
 
 ## 先做一部 24 秒短片
 
@@ -31,7 +31,7 @@ python -X utf8 scripts/serve.py build/river-town --port 8765
 python -X utf8 scripts/build.py --project path/to/project.json --narration path/to/voice.wav --out build/my-city-v1
 ```
 
-`build.py` 不下载素材、不接触 API，也不自动断句。录音的句界由你根据实际声音决定。先做一段包含困难转场的样片，再增加章节。
+`build.py` 只负责构建，不下载素材、不接触 API，也不自动断句；Agent 在构建前负责查找素材和按实际录音标句界。`image` 只接收本地静态图。需要用整段动态素材时，另行用 FFmpeg 剪合，并核对最终字幕、音轨和片长。先做一段包含困难转场的样片，再增加章节。
 
 ## 在 Codex 里使用
 
@@ -41,7 +41,17 @@ python -X utf8 scripts/build.py --project path/to/project.json --narration path/
 git clone https://github.com/dailyoozoo/city-documentary-skill.git .agents/skills/city-documentary-skill
 ```
 
-分两次调用：第一次提供城市、主题、片长和来源，只写分句旁白。确认稿子后录成 `voice.wav`，标出每句开始和全段结束。第二次提供定稿、录音、句界和素材，请 Codex 按录音排镜头和双语字幕，再构建视频。两条可直接复制的提示词见[公众号教程](article/article.md)。
+分两次调用：第一次给城市、主题和片长，由 Agent 查资料、写编号旁白和来源表。第二次交定稿，有配音工具时按授权调用，没有时接已有录音或先做静音样片。Agent 标句界，主动检索可用画面、记录出处和许可，找不到合适素材再画图或调用图像生成工具做示意。两条可直接复制的提示词见[公众号教程](article/article.md)。
+
+将输入放在用户项目里，例如 `work/city-film/project.json`、`work/city-film/voice.wav` 和 `work/city-film/media/`；`image` 路径以 `project.json` 为基准，例如 `media/shot-01.jpg`。以下命令从**用户项目根目录**运行（与上面从 Skill 仓库根目录运行的示例不同）：
+
+```sh
+python -m pip install -r .agents/skills/city-documentary-skill/requirements.txt
+python -X utf8 .agents/skills/city-documentary-skill/scripts/build.py --project work/city-film/project.json --narration work/city-film/voice.wav --out build/city-film-v1
+python -X utf8 .agents/skills/city-documentary-skill/scripts/serve.py build/city-film-v1 --port 8765
+```
+
+浏览器打开 `http://127.0.0.1:8765/review.html`。输出目录包含 `film.mp4`、双语 SRT/VTT、观看页和技术检查报告；续做新版本时给 `--out` 一个未存在的目录。
 
 ## 上海案例范围
 
