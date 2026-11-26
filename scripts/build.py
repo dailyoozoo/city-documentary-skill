@@ -14,8 +14,8 @@ from PIL import Image
 from scene import font_path, paint
 
 ROOT = Path(__file__).resolve().parents[1]
-DEMO = ROOT / 'assets/river-town/project.json'
-KINDS = {'river', 'wharf', 'bridge', 'city', 'image'}
+DEMO = ROOT / 'article/demo/project.json'
+KINDS = {'river', 'wharf', 'bridge', 'city', 'image', 'video'}
 
 
 def load(path):
@@ -41,14 +41,21 @@ def load(path):
         seen.add(s['id'])
         if s['kind'] not in KINDS:
             raise ValueError(f"Unsupported shot kind {s['kind']}")
-        if s['kind'] == 'image':
-            image = Path(s['image'])
-            resolved = (path.parent / image).resolve(strict=True)
-            if image.is_absolute() or not resolved.is_relative_to(path.parent):
-                raise ValueError('Place images next to the project or in a child folder')
-            s['image_path'] = resolved
+        if s['kind'] in ('image', 'video'):
+            key = s['kind']
+            media = Path(s[key])
+            resolved = (path.parent / media).resolve(strict=True)
+            if media.is_absolute() or not resolved.is_relative_to(path.parent) or not resolved.is_file():
+                raise ValueError('Place media files next to the project or in a child folder')
+            s['media_path'] = resolved
             if s['visual_role'] not in ('历史资料','现代参照','示意图'):
-                raise ValueError('image needs a valid visual_role')
+                raise ValueError('Media needs a valid visual_role')
+            if key == 'video':
+                offset = s.get('source_frame', 0)
+                if type(offset) is not int or offset < 0:
+                    raise ValueError('source_frame must be a nonnegative integer at the project fps')
+                if type(s.get('captions_in_picture', False)) is not bool:
+                    raise ValueError('captions_in_picture must be true or false')
         seconds = s['seconds']
         if type(seconds) not in (int, Fraction) or not 0 < seconds <= 120:
             raise ValueError('seconds must be a positive JSON number up to 120')
@@ -118,6 +125,27 @@ def audio_duration(path):
     return Fraction(value)
 
 
+def video_frames(project, shot, count):
+    w, h, fps = project['width'], project['height'], project['fps']
+    start = shot.get('source_frame', 0)
+    filters = (f'fps={fps},trim=start_frame={start}:end_frame={start+count},setpts=PTS-STARTPTS,'
+               f'scale={w}:{h}:force_original_aspect_ratio=increase:force_divisible_by=2,crop={w}:{h},setsar=1')
+    cmd = ['ffmpeg','-v','error','-xerror','-i',str(shot['media_path']),'-map','0:v:0',
+           '-an','-sn','-vf',filters,'-pix_fmt','rgb24','-c:v','rawvideo','-threads:v','1','-f','rawvideo','pipe:1']
+    with sp.Popen(cmd, stdout=sp.PIPE) as source:
+        try:
+            for _ in range(count):
+                raw = source.stdout.read(w * h * 3)
+                if len(raw) != w * h * 3:
+                    raise ValueError(f"Source video is too short or unreadable: {shot['id']}")
+                yield Image.frombytes('RGB',(w,h),raw)
+            if source.wait() != 0:
+                raise ValueError(f"Video decoding failed: {shot['id']}")
+        finally:
+            if source.poll() is None:
+                source.kill()
+
+
 def encode(args, project, total, face):
     fps = project['fps']
     seconds = f'{total/fps:.9f}'
@@ -149,17 +177,32 @@ def encode(args, project, total, face):
         try:
             for i,s in enumerate(project['shots']):
                 length = s['out_frame'] - s['in_frame']
-                photo = None
-                if s['kind'] == 'image':
-                    with Image.open(s['image_path']) as image:
-                        photo = image.convert('RGB')
-                still = paint(project,s,.5,face,photo)
-                still.save(args.out / f"still-{s['id']}.jpg", quality=93)
-                if i == 0:
-                    still.save(args.out/'poster.jpg', quality=93)
-                for frame in range(length):
-                    image = still if photo is not None else paint(project,s,frame/max(length-1,1),face)
-                    process.stdin.write(image.tobytes())
+                still_path = args.out / f"still-{s['id']}.jpg"
+                if s['kind'] == 'video':
+                    frames = video_frames(project, s, length)
+                    try:
+                        for frame, image in enumerate(frames):
+                            if not s.get('captions_in_picture', False):
+                                image = paint(project, s, 0, face, image)
+                            if frame == length // 2:
+                                image.save(still_path, quality=93)
+                                if i == 0:
+                                    image.save(args.out/'poster.jpg', quality=93)
+                            process.stdin.write(image.tobytes())
+                    finally:
+                        frames.close()
+                else:
+                    photo = None
+                    if s['kind'] == 'image':
+                        with Image.open(s['media_path']) as image:
+                            photo = image.convert('RGB')
+                    still = paint(project,s,.5,face,photo)
+                    still.save(still_path, quality=93)
+                    if i == 0:
+                        still.save(args.out/'poster.jpg', quality=93)
+                    for frame in range(length):
+                        image = still if photo is not None else paint(project,s,frame/max(length-1,1),face)
+                        process.stdin.write(image.tobytes())
         except Exception:
             process.kill()
             raise
@@ -198,17 +241,26 @@ def verify(out, p, total, narration, music):
 
 def main():
     parser = argparse.ArgumentParser(description='Build a city documentary from a local JSON project and optional local audio')
-    parser.add_argument('--project',type=Path,default=DEMO)
+    parser.add_argument('--project',type=Path)
     parser.add_argument('--out',type=Path,required=True)
     parser.add_argument('--font',type=Path)
     parser.add_argument('--narration',type=Path)
     parser.add_argument('--music',type=Path)
+    parser.add_argument('--example', action='store_true', help='Use the bundled Shanghai picture and narration')
     args = parser.parse_args()
+    if args.example:
+        if args.project or args.narration:
+            parser.error('--example provides its own project and narration')
+        args.project = DEMO
+        args.narration = DEMO.parent / 'voice.wav'
+    if not args.project:
+        parser.error('Provide --project or select --example')
     try:
         if any(not shutil.which(tool) for tool in ('ffmpeg','ffprobe')):
             raise ValueError('Install FFmpeg with libx264 and make ffmpeg/ffprobe available on PATH')
         p,total = load(args.project.resolve(strict=True))
-        face = font_path(args.font)
+        face = (font_path(args.font) if any(s['kind'] != 'video' or not s.get('captions_in_picture')
+                                          for s in p['shots']) else None)
         if args.narration and audio_duration(args.narration) > Fraction(total,p['fps']):
             raise ValueError('Narration is longer than the timeline. Adjust shot times to the recording.')
         if args.music:

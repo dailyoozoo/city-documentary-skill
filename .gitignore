@@ -6,6 +6,8 @@ build/
 *.wav
 *.mp3
 *.mp4
-!article/demo/film.mp4
 *.m4a
 *.log
+!article/demo/film.mp4
+!article/demo/picture.mp4
+!article/demo/voice.wav

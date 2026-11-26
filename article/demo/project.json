@@ -1,0 +1,51 @@
+{
+  "title": "上海 · 城市纪事",
+  "subtitle": "老城厢 · 三维空间示意",
+  "width": 1280,
+  "height": 720,
+  "fps": 24,
+  "shots": [
+    {
+      "id": "riverbank",
+      "chapter": "河边的城址",
+      "title": "河边的城址",
+      "kind": "video",
+      "video": "picture.mp4",
+      "source_frame": 0,
+      "captions_in_picture": true,
+      "seconds": 7.75,
+      "zh": "上海在黄浦江西岸筑起坚城，成长为繁盛一时的“江海之通津”。",
+      "en": "Shanghai raised a circular fortress on the west bank of the Huangpu.",
+      "source": "《上海 · 城市纪事》成片中的程序化三维示意，非档案影像或实测复原",
+      "visual_role": "示意图"
+    },
+    {
+      "id": "wall",
+      "chapter": "城墙合围",
+      "title": "城墙合围",
+      "kind": "video",
+      "video": "picture.mp4",
+      "source_frame": 186,
+      "captions_in_picture": true,
+      "seconds": 8.041666667,
+      "zh": "明嘉靖三十二年，为抵御倭患，上海仅用两个月便筑起周长九里的环形城墙；",
+      "en": "In the 32nd year of Jiajing (1553), a nine-li wall was built in just two months to resist coastal raiders.",
+      "source": "《上海 · 城市纪事》成片中的程序化三维示意，非档案影像或实测复原",
+      "visual_role": "示意图"
+    },
+    {
+      "id": "homes",
+      "chapter": "护城河与民居",
+      "title": "护城河与民居",
+      "kind": "video",
+      "video": "picture.mp4",
+      "source_frame": 379,
+      "captions_in_picture": true,
+      "seconds": 7.458333333,
+      "zh": "护城河碧波环抱，六座城楼巍然耸立，城内粉墙黛瓦鳞次栉比。",
+      "en": "A moat encircled six gate towers, with white walls and dark-tiled homes packed within.",
+      "source": "《上海 · 城市纪事》成片中的程序化三维示意，非档案影像或实测复原",
+      "visual_role": "示意图"
+    }
+  ]
+}

@@ -59,7 +59,7 @@ def paint(project, shot, progress, face, photo=None):
             f = font(face, f.size - 1)
         draw.text((x, y * scale), message, font=f, fill=color)
 
-    if kind != 'image':
+    if photo is None:
         zoom = min(w / 960, scale) * (5.5 + .4 * progress)
         def point(x, y, z=0):
             return (.56*w + (x-50 + .38*(y-50) + 2*progress)*zoom,

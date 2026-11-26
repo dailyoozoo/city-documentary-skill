@@ -1,119 +1,39 @@
 <!doctype html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>用城市纪录片 Skill 做一条片：四步，每步看成品</title>
-<meta name="description" content="用一条四镜头样片演示写旁白、配音标时、找画面和导出视频。每步附实际示例。">
-</head>
-<body style="margin:0;background:#e9ede5;font-family:system-ui,'PingFang SC','Microsoft YaHei',sans-serif;">
-<article style="box-sizing:border-box;max-width:672px;margin:0 auto;padding:clamp(16px,5vw,37px);background:#fbfaf5;">
-<header style="margin:0 0 17px;padding:17px 18px;background:#173d34;border-top:4px solid #b9844f;color:#fff7df;">
-<p style="margin:0 0 8px;color:#f2ce9d;font-size:13px;letter-spacing:.08em;">城市纪录片 · 四步实操</p>
-<h1 style="margin:0;font-size:clamp(23px,5.8vw,35px);line-height:1.36;text-wrap:balance;">用城市纪录片 Skill 做一条片：四步，每步看成品</h1>
-</header>
-
-<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;">在你的项目目录打开终端，运行下面这行，再重新打开这个项目的 Codex 会话。看到 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">.agents/skills/city-documentary-skill/SKILL.md</code>，就装好了。下面四步都在同一个 Codex 对话里做。</p>
-<pre style="box-sizing:border-box;max-width:100%;margin:0 0 16px;padding:12px 14px;background:#ebf0e9;border-left:3px solid #46715f;color:#173d34;white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;line-height:1.65;"><code style="font-family:Consolas,monospace;white-space:inherit;overflow-wrap:inherit;">git clone https://github.com/dailyoozoo/city-documentary-skill.git .agents/skills/city-documentary-skill
-</code></pre>
-<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;">下面用虚构示例《沿河而生》演示：<strong style="color:#174e40;font-weight:740;">写稿 → 配音 → 找画面 → 出片</strong>。每步下面就是它的产物。</p>
-<h2 style="margin:30px 0 13px;padding-bottom:6px;border-bottom:1px solid #d8e1d8;color:#194538;font-size:22px;font-weight:750;line-height:1.4;">01｜写旁白</h2>
-<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">你怎么做：</strong> 把城市、想讲的变化和片长填进这句话，发给 Codex：</p>
-<blockquote style="margin:0 0 14px;padding:12px 14px;background:#edf2ea;border-left:3px solid #52806b;">
-<p style="margin:0;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;">用 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">$city-documentary-skill</code> 做一条 24 秒短片，讲【城市】的【变化】。你自己查资料。先给我四句带编号的旁白和出处。</p>
-</blockquote>
-<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">产物：一份可以直接照着念的稿子。</strong> 每句只讲一件事。配音前，先确认地名、年份和不好念的字。示例稿长这样：</p>
-<section aria-label="旁白稿示例" style="margin:0 0 12px;padding:10px 13px;background:#f0eee3;border-left:3px solid #b58b58;"><p style="margin:0 0 4px;font-size:15px;line-height:1.7;color:#29352f;">01｜沿着河找一找，哪里最适合停船？</p><p style="margin:0 0 4px;font-size:15px;line-height:1.7;color:#29352f;">02｜码头有了人流，街道慢慢接到河岸。</p><p style="margin:0 0 4px;font-size:15px;line-height:1.7;color:#29352f;">03｜桥把两岸连在一起，人开始往对岸走。</p><p style="margin:0 0 4px;font-size:15px;line-height:1.7;color:#29352f;">04｜把四个时刻接起来，就看到了两岸的变化。</p></section>
-
-<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><a href="demo/narration.md" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">打开示例旁白稿</a></p>
-<h2 style="margin:30px 0 13px;padding-bottom:6px;border-bottom:1px solid #d8e1d8;color:#194538;font-size:22px;font-weight:750;line-height:1.4;">02｜先配音</h2>
-<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">你怎么做：</strong> 稿子定下来后，接着发：</p>
-<blockquote style="margin:0 0 14px;padding:12px 14px;background:#edf2ea;border-left:3px solid #52806b;">
-<p style="margin:0;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;">按这四句配音。用我已授权的配音工具，或者我发的录音。给我一条干净的人声，再标出每句从哪秒到哪秒。</p>
-</blockquote>
-<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">产物：一条旁白 WAV，一张时间表。</strong> 后面按这张表切镜头。下表是静音示例的排镜时间；真正配音后，要按实录更新。</p>
-<table style="margin:0 0 15px;width:100%;border-collapse:collapse;font-size:14px;line-height:1.55;color:#29352f;">
-<thead>
-<tr>
-<th style="padding:8px 9px;background:#e6eee3;color:#174e40;text-align:left;font-weight:700;">句子</th>
-<th style="padding:8px 9px;background:#e6eee3;color:#174e40;text-align:left;font-weight:700;">开始</th>
-<th style="padding:8px 9px;background:#e6eee3;color:#174e40;text-align:left;font-weight:700;">结束</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">01</td>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">0 秒</td>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">6 秒</td>
-</tr>
-<tr>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">02</td>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">6 秒</td>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">12 秒</td>
-</tr>
-<tr>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">03</td>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">12 秒</td>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">18 秒</td>
-</tr>
-<tr>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">04</td>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">18 秒</td>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">24 秒</td>
-</tr>
-</tbody>
-</table>
-<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><a href="demo/timing.tsv" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">下载示例时间表</a></p>
-<h2 style="margin:30px 0 13px;padding-bottom:6px;border-bottom:1px solid #d8e1d8;color:#194538;font-size:22px;font-weight:750;line-height:1.4;">03｜让 Agent 找画面</h2>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>用一个 Skill 做城市纪录片：拿上海老城厢走一遍</title></head>
+<body style="margin:0;background:#e9ede5;font-family:system-ui,'Microsoft YaHei','PingFang SC',sans-serif;">
+<article style="box-sizing:border-box;max-width:720px;margin:0 auto;padding:clamp(16px,5vw,36px);background:#fbfaf5;">
+<header style="margin:0 0 17px;padding:17px 18px;background:#173d34;border-top:4px solid #b9844f;color:#fff7df;"><div style="margin:0 0 7px;color:#f2ce9d;font-size:13px;letter-spacing:.08em;">上海 · 城市纪录片实操</div><h1 style="margin:0;font-size:clamp(23px,5.8vw,34px);line-height:1.36;">用一个 Skill 做城市纪录片：拿上海老城厢走一遍</h1></header>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;">这篇用《上海 · 城市纪事》的老城厢段落演示。你只要给 Codex 一个城市、一件想讲清楚的事，再按下面四步发消息。每一步的产物都放在正文里。</p>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;">在你的项目目录打开终端，运行下面这行。重新打开这个项目的 Codex 会话，四步都在同一个对话里做。</p>
+<pre style="box-sizing:border-box;max-width:100%;margin:0 0 16px;padding:12px 14px;background:#ebf0e9;border-left:3px solid #46715f;color:#173d34;white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;line-height:1.65;"><code>git clone https://github.com/dailyoozoo/city-documentary-skill.git .agents/skills/city-documentary-skill</code></pre>
+<h2 style="margin:31px 0 13px;padding-bottom:6px;border-bottom:1px solid #d8e1d8;color:#194538;font-size:22px;line-height:1.4;">01｜写旁白</h2>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">你怎么做：</strong> 把城市、主题、时长填进去，发给 Codex：</p>
+<blockquote style="margin:0 0 14px;padding:12px 14px;background:#edf2ea;border-left:3px solid #52806b;color:#29352f;font-size:16px;line-height:1.65;overflow-wrap:anywhere;">用 $city-documentary-skill 做一条约 30 秒的短片，讲【城市】的【变化】。你查资料，先给我带编号的旁白，每个关键事实附出处。</blockquote>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">产物：一份可以直接念的旁白稿，一张来源表。</strong> 先核对年份、地名和不好念的字，再定稿。上海样片实际用了这三句：</p>
+<div style="margin:0 0 12px;padding:10px 13px;background:#f0eee3;border-left:3px solid #b58b58;color:#29352f;font-size:15px;line-height:1.65;"><div style="margin:3px 0;">01｜上海在黄浦江西岸筑起坚城，成长为繁盛一时的“江海之通津”。</div><div style="margin:3px 0;">02｜明嘉靖三十二年，为抵御倭患，上海仅用两个月便筑起周长九里的环形城墙；</div><div style="margin:3px 0;">03｜护城河碧波环抱，六座城楼巍然耸立，城内粉墙黛瓦鳞次栉比。</div></div>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;">出处示例：筑城年份和护城河查<a href="https://www.shnu.edu.cn/57/f0/c26244a808944/page.htm" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">上海师范大学的老城厢研究</a>；「九里」参照<a href="https://www.yugarden.com.cn/page/ArticleView/history-scenery.html" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">豫园官网</a>。 <a href="demo/sources.tsv" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">查看完整来源表</a></p>
+<h2 style="margin:31px 0 13px;padding-bottom:6px;border-bottom:1px solid #d8e1d8;color:#194538;font-size:22px;line-height:1.4;">02｜先配音</h2>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">你怎么做：</strong> 确认稿子后，接着发：</p>
+<blockquote style="margin:0 0 14px;padding:12px 14px;background:#edf2ea;border-left:3px solid #52806b;color:#29352f;font-size:16px;line-height:1.65;overflow-wrap:anywhere;">用已接入的配音工具念定稿，或者用我提供的录音。给我一条干净人声，再标出每句在哪一秒开始、在哪一秒结束。</blockquote>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">产物：一条单独的旁白音频，一张逐句时间表。</strong> 音频要先听一遍，尤其是专名和数字。下面是这段上海样片实际使用的旁白和剪辑时码，后续按它排画面。</p>
+<audio controls preload="metadata" src="demo/voice.wav" aria-label="上海老城厢旁白" style="display:block;width:100%;margin:0 0 10px;"></audio>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><a href="demo/voice.wav" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">下载旁白 WAV</a> · <a href="demo/timing.tsv" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">下载时间表</a></p>
+<table style="width:100%;margin:0 0 12px;border-collapse:collapse;font-size:14px;line-height:1.45;color:#29352f;"><thead><tr><th scope="col" style="padding:7px 8px;border-bottom:1px solid #d8e1d8;text-align:left;background:#e8efe7;">句子</th><th scope="col" style="padding:7px 8px;border-bottom:1px solid #d8e1d8;text-align:left;background:#e8efe7;">开始（秒）</th><th scope="col" style="padding:7px 8px;border-bottom:1px solid #d8e1d8;text-align:left;background:#e8efe7;">结束（秒）</th></tr></thead><tbody><tr><td style="padding:7px 8px;border-bottom:1px solid #d8e1d8;text-align:left;">01</td><td style="padding:7px 8px;border-bottom:1px solid #d8e1d8;text-align:left;">0.000</td><td style="padding:7px 8px;border-bottom:1px solid #d8e1d8;text-align:left;">7.750</td></tr><tr><td style="padding:7px 8px;border-bottom:1px solid #d8e1d8;text-align:left;">02</td><td style="padding:7px 8px;border-bottom:1px solid #d8e1d8;text-align:left;">7.750</td><td style="padding:7px 8px;border-bottom:1px solid #d8e1d8;text-align:left;">15.792</td></tr><tr><td style="padding:7px 8px;border-bottom:1px solid #d8e1d8;text-align:left;">03</td><td style="padding:7px 8px;border-bottom:1px solid #d8e1d8;text-align:left;">15.792</td><td style="padding:7px 8px;border-bottom:1px solid #d8e1d8;text-align:left;">23.250</td></tr></tbody></table>
+<h2 style="margin:31px 0 13px;padding-bottom:6px;border-bottom:1px solid #d8e1d8;color:#194538;font-size:22px;line-height:1.4;">03｜找画面、做分镜</h2>
 <p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">你怎么做：</strong> 接着发：</p>
-<blockquote style="margin:0 0 14px;padding:12px 14px;background:#edf2ea;border-left:3px solid #52806b;">
-<p style="margin:0;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;">按时间表给每句话配一个画面。你去网上找能用的照片、地图或视频，记下出处和使用许可。找不到合适的就做示意图。先把分镜给我看。</p>
-</blockquote>
-<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">产物：一份分镜和对应的画面。</strong> 图和片段都由 Agent 找；下面是本示例实际用上的四个镜头。</p>
-<table style="margin:0 0 15px;width:100%;border-collapse:collapse;font-size:14px;line-height:1.55;color:#29352f;">
-<thead>
-<tr>
-<th style="padding:8px 9px;background:#e6eee3;color:#174e40;text-align:left;font-weight:700;">编号</th>
-<th style="padding:8px 9px;background:#e6eee3;color:#174e40;text-align:left;font-weight:700;">时间</th>
-<th style="padding:8px 9px;background:#e6eee3;color:#174e40;text-align:left;font-weight:700;">画面</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">01</td>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">0–6 秒</td>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">俯看河流和两岸</td>
-</tr>
-<tr>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">02</td>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">6–12 秒</td>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">拉近到码头，看到街道接到河岸</td>
-</tr>
-<tr>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">03</td>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">12–18 秒</td>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">切到桥，交代人怎么过河</td>
-</tr>
-<tr>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">04</td>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">18–24 秒</td>
-<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">拉远，看到两岸连成一片</td>
-</tr>
-</tbody>
-</table>
-<figure style="margin:15px 0 12px;"><img alt="第 03 镜：桥把两岸连起来。画面是虚构河城示意。" height="540" src="still-bridge.jpg" style="width:100%;height:auto;display:block;border-radius:4px;" width="960"/><figcaption style="margin:6px 0 0;color:#536358;font-size:13px;line-height:1.6;">第 03 镜：桥把两岸连起来。画面是虚构河城示意。</figcaption></figure>
-<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><a href="demo/storyboard.md" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">打开示例分镜</a></p>
-<h2 style="margin:30px 0 13px;padding-bottom:6px;border-bottom:1px solid #d8e1d8;color:#194538;font-size:22px;font-weight:750;line-height:1.4;">04｜让 Agent 出片</h2>
-<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">你怎么做：</strong> 看完分镜，接着发：</p>
-<blockquote style="margin:0 0 14px;padding:12px 14px;background:#edf2ea;border-left:3px solid #52806b;">
-<p style="margin:0;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;">按分镜把画面剪到旁白上，加双语字幕。检查声音、字幕和画面对不对得上，再把 MP4、字幕和观看页发给我。缺出片工具就告诉我怎么装。</p>
-</blockquote>
-<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">产物：能打开播放的成片、一份独立字幕、一个能按镜头跳转的观看页。</strong> 下面就是这四句、这四个镜头做出来的 24 秒样片。演示片是静音的，可以看画面和字幕怎么对应。</p>
-<p style="margin:0 0 14px;color:#29352f;font-size:15px;line-height:1.7;overflow-wrap:anywhere;">字幕长这样：<strong>0–6 秒｜沿着河找一找，哪里最适合停船？｜Follow the river. Where could a boat stop?</strong></p>
-<video aria-label="沿河而生，24 秒静音样片" controls="" playsinline="" poster="still-river.jpg" preload="metadata" src="demo/film.mp4" style="box-sizing:border-box;display:block;width:100%;height:auto;aspect-ratio:16/9;margin:4px 0 12px;border-radius:4px;background:#173d34;"></video>
-<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><a href="demo/film.mp4" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">下载样片 MP4</a> · <a href="demo/subtitles.srt" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">下载字幕 SRT</a> · <a href="demo/review.html" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">打开样片观看页</a></p>
-<section style="margin:20px 0 0;padding:13px 14px;background:#e8efe7;border-top:2px solid #50806b;"><p style="margin:0 0 4px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">GitHub｜城市纪录片制作 Skill</strong></p><p style="margin:0;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><a href="https://github.com/dailyoozoo/city-documentary-skill" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">https://github.com/dailyoozoo/city-documentary-skill</a></p></section>
-
-</article>
-</body>
-</html>
+<blockquote style="margin:0 0 14px;padding:12px 14px;background:#edf2ea;border-left:3px solid #52806b;color:#29352f;font-size:16px;line-height:1.65;overflow-wrap:anywhere;">按这张时间表给每句配画面。你去网上找授权可用的照片、地图或视频，记录出处和许可；找不到合适的，就做一张图或一段三维示意。先把分镜和对应画面发我。</blockquote>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">产物：一份分镜，和每段要用的画面。</strong> 找素材这一步由 Agent 做。上海这里用的是三维示意：利用同一条河和同一圈城墙，先定方向，再把镜头带进城里。下面三张直接截自最终成片。</p>
+<figure style="margin:0 0 17px;"><img src="demo/final-riverbank.jpg" width="1280" height="720" alt="先交代方位" style="box-sizing:border-box;display:block;width:100%;border-radius:4px;background:#173d34;height:auto;"><figcaption style="margin:6px 0 0;color:#536358;font-size:14px;line-height:1.6;">01｜0.000–7.750 秒：先交代方位。俯看黄浦江与城址，让观众知道老城在河的哪一边。</figcaption></figure>
+<figure style="margin:0 0 17px;"><img src="demo/final-wall.jpg" width="1280" height="720" alt="再让城墙出现" style="box-sizing:border-box;display:block;width:100%;border-radius:4px;background:#173d34;height:auto;"><figcaption style="margin:6px 0 0;color:#536358;font-size:14px;line-height:1.6;">02｜7.750–15.792 秒：再让城墙出现。沿着城址的轮廓让城墙合拢，黄浦江留在画面里作参照。</figcaption></figure>
+<figure style="margin:0 0 17px;"><img src="demo/final-homes.jpg" width="1280" height="720" alt="最后进入城内" style="box-sizing:border-box;display:block;width:100%;border-radius:4px;background:#173d34;height:auto;"><figcaption style="margin:6px 0 0;color:#536358;font-size:14px;line-height:1.6;">03｜15.792–23.250 秒：最后进入城内。从护城河降到屋顶高度，看到城里成片的民居。</figcaption></figure>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><a href="demo/storyboard.md" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">打开完整分镜</a></p>
+<h2 style="margin:31px 0 13px;padding-bottom:6px;border-bottom:1px solid #d8e1d8;color:#194538;font-size:22px;line-height:1.4;">04｜导出视频</h2>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">你怎么做：</strong> 看过分镜后，接着发：</p>
+<blockquote style="margin:0 0 14px;padding:12px 14px;background:#edf2ea;border-left:3px solid #52806b;color:#29352f;font-size:16px;line-height:1.65;overflow-wrap:anywhere;">按分镜把画面剪到旁白上，加双语字幕。检查声音、字幕和画面能不能对上，导出 MP4、独立字幕和观看页。</blockquote>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">产物：一条能播放的 MP4、一份双语字幕、一个能按段跳转的观看页。</strong> 下面这段长 23.25 秒，取自《上海 · 城市纪事》的最终画面，用原项目同一段旁白，公开演示省去了配乐。</p>
+<video controls playsinline preload="metadata" poster="demo/final-wall.jpg" src="demo/film.mp4" aria-label="上海老城厢样片" style="box-sizing:border-box;display:block;width:100%;border-radius:4px;background:#173d34;height:auto;aspect-ratio:16/9;margin:0 0 12px;"></video>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><a href="demo/film.mp4" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">下载样片 MP4</a> · <a href="demo/subtitles.srt" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">下载字幕 SRT</a> · <a href="demo/review.html" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">打开观看页</a></p>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;">想自己跑一次？GitHub 里带了这段的画面、旁白和工程。按 README 的「先跑通上海样片」运行，就能重新导出视频、字幕和观看页。</p>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;font-size:14px;color:#536358;">解压后打开 HTML，就能播放音视频和查看附件。发公众号时，在后台上传样片和配图；如需单独放旁白，按后台要求上传音频。</p>
+<footer style="margin-top:18px;padding:13px 14px;background:#e8efe7;border-top:2px solid #50806b;"><strong style="color:#174e40;font-weight:740;">GitHub｜城市纪录片制作 Skill</strong><p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><a href="https://github.com/dailyoozoo/city-documentary-skill" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">https://github.com/dailyoozoo/city-documentary-skill</a></p></footer>
+</article></body></html>
