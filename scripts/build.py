@@ -14,7 +14,7 @@ from PIL import Image
 from scene import font_path, paint
 
 ROOT = Path(__file__).resolve().parents[1]
-DEMO = ROOT / 'article/demo/project.json'
+DEMO = ROOT / 'examples/shanghai/project.json'
 KINDS = {'river', 'wharf', 'bridge', 'city', 'image', 'video'}
 
 

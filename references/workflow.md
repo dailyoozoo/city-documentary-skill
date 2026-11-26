@@ -8,7 +8,7 @@
 
 ## 工程字段
 
-从 [上海样片工程](../article/demo/project.json) 复制结构。顶层填写 `title`、`subtitle`、`width`、`height`、`fps` 和按播放顺序排列的 `shots`。
+从 [上海样片工程](../examples/shanghai/project.json) 复制结构。顶层填写 `title`、`subtitle`、`width`、`height`、`fps` 和按播放顺序排列的 `shots`。
 
 每条镜头记录 `id`（唯一小写英文/数字/短横线，首字符为字母）、`chapter`、`title`、`seconds`、中文 `zh`、英文 `en`、`source` 和 `kind`。画幅宽高用偶数。最开始的停顿或片尾留白也计入时间轴；旁白不能超过整片时长。媒体路径必须位于 `project.json` 的目录或子目录内。
 

@@ -8,6 +8,6 @@ build/
 *.mp4
 *.m4a
 *.log
-!article/demo/film.mp4
-!article/demo/picture.mp4
-!article/demo/voice.wav
+!examples/shanghai/film.mp4
+!examples/shanghai/picture.mp4
+!examples/shanghai/voice.wav

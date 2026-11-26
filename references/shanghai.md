@@ -2,8 +2,8 @@
 
 这个案例取自《上海 · 城市纪事》成片 **01:27.208–01:50.458**，公开片段长 **23.25 秒**。它示范一条连续的镜头关系：先交代黄浦江与城址的相对位置，再让城墙沿城址出现，最后把视点降到民居屋顶。城墙、河流和民居是空间与形制示意，不是古代实测模型。原项目还有推进豫园等后续镜头。
 
-- [编号旁白](../article/demo/narration.md) 和[来源表](../article/demo/sources.tsv) 说明写稿的依据；可在稿件确认时先核对年份、地名和专名读法。
-- [实际剪辑时码](../article/demo/timing.tsv) 和[分镜](../article/demo/storyboard.md) 说明每句给观众看什么；`voice.wav` 是成片所用旁白的节选，`picture.mp4` 是最终三维画面节选，含已烧录的双语字幕。
-- [工程输入](../article/demo/project.json) 和 [成片](../article/demo/film.mp4) 是出片的两端。按 [README](../README.md) 的上海样片命令复跑，可产出 MP4、双语字幕、观看页和核验记录。公开样片不含原片配乐。
+- [编号旁白](../examples/shanghai/narration.md) 和[来源表](../examples/shanghai/sources.tsv) 说明写稿的依据；可在稿件确认时先核对年份、地名和专名读法。
+- [实际剪辑时码](../examples/shanghai/timing.tsv) 和[分镜](../examples/shanghai/storyboard.md) 说明每句给观众看什么；`voice.wav` 是成片所用旁白的节选，`picture.mp4` 是最终三维画面节选，含已烧录的双语字幕。
+- [工程输入](../examples/shanghai/project.json) 和 [成片](../examples/shanghai/film.mp4) 是出片的两端。按 [README](../README.md) 的上海样片命令复跑，可产出 MP4、双语字幕、观看页和核验记录。公开样片不含原片配乐。
 
 新题材可以继续沿用「大视角先定方向 → 让一个要讲的物件出现 → 镜头进入局部」的思路。历史照片、地图和视频先找可核对、可使用的原文件，缺乏可靠影像时再自己画或制作三维示意。需要保留动态时，直接把视频作为镜头输入。

@@ -2,9 +2,7 @@
 
 给 Codex 一个城市、一个想讲清楚的变化和片长。它负责查资料、写旁白、接入可用配音、找或做画面，最后交一条片和双语字幕。下面用《上海 · 城市纪事》的老城厢段落走一遍。
 
-![《上海 · 城市纪事》最终镜头：河岸旁的老城厢，程序化三维示意](article/demo/final-wall.jpg)
-
-[公众号教程：四步和每步产物](article/article.md) · [HTML 版](article/shanghai-city-documentary.html) · [上海样片 MP4](article/demo/film.mp4) · [上海案例](references/shanghai.md)
+[上海样片 MP4](examples/shanghai/film.mp4) · [上海案例](references/shanghai.md)
 
 ## 在 Codex 里用
 
@@ -32,7 +30,7 @@ python -X utf8 scripts/serve.py build/shanghai-demo --port 8765
 
 打开本机 `http://127.0.0.1:8765/review.html`，可以播放、按段跳转，并下载 MP4 和独立字幕。`build/shanghai-demo` 必须是新目录，重新出片时换一个目录名。服务结束时按 `Ctrl+C`。
 
-输入都在 [`article/demo/`](article/demo/)：三句[旁白](article/demo/narration.md)、[配音时码](article/demo/timing.tsv)、[分镜](article/demo/storyboard.md)、[来源表](article/demo/sources.tsv)、`voice.wav`、`picture.mp4` 和 [`project.json`](article/demo/project.json)。公开样片来自实际上海成片，用原项目的干声旁白，省去原片配乐；三维画面是形制示意。命令复跑的是这段的剪辑和出片，不需要原工程，也不从零重建全部上海模型。
+输入都在 [`examples/shanghai/`](examples/shanghai/)：三句[旁白](examples/shanghai/narration.md)、[配音时码](examples/shanghai/timing.tsv)、[分镜](examples/shanghai/storyboard.md)、[来源表](examples/shanghai/sources.tsv)、`voice.wav`、`picture.mp4` 和 [`project.json`](examples/shanghai/project.json)。公开样片来自实际上海成片，用原项目的干声旁白，省去原片配乐；三维画面是形制示意。命令复跑的是这段的剪辑和出片，不需要原工程，也不从零重建全部上海模型。
 
 ## 换成你自己的城市
 
