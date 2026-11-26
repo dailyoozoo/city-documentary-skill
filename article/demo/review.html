@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>沿河而生</title>
+<style>body{margin:0;background:#f4ecdc;color:#263f3d;font:16px/1.65 system-ui,sans-serif}main{width:min(92%,900px);margin:2rem auto 4rem}video{display:block;width:100%;background:#263f3d}a{color:#246269}button{font:inherit;padding:.35rem .65rem;color:#fff;background:#2c5653;border:0;border-radius:.25rem;cursor:pointer}li{margin:.75rem 0}li p{margin:.2rem 0;color:#595954}</style></head>
+<body><main><h1>沿河而生</h1><p>虚构河城 · 空间演变示意</p>
+<video controls preload="metadata" playsinline poster="../still-river.jpg" src="film.mp4" aria-label="沿河而生"></video>
+<p><a href="film.mp4" download>下载成片</a> · <a href="subtitles.srt" download>双语 SRT</a> · <a href="subtitles.vtt" download>双语 VTT</a> · <a href="verification.json">技术检查</a></p><h2>镜头与来源</h2><ol><li><button type="button" data-at="0.000000">00:00:00 · 河流</button> <a href="../still-river.jpg">镜头图</a><p>原创虚构图解；非真实地理资料</p></li><li><button type="button" data-at="6.000000">00:00:06 · 码头</button> <a href="../still-wharf.jpg">镜头图</a><p>原创程序化建筑；非历史复原</p></li><li><button type="button" data-at="12.000000">00:00:12 · 过河</button> <a href="../still-bridge.jpg">镜头图</a><p>原创程序化建筑；非历史复原</p></li><li><button type="button" data-at="18.000000">00:00:18 · 两岸</button> <a href="../still-city.jpg">镜头图</a><p>原创程序化建筑；非历史复原</p></li></ol></main>
+<script>const video = document.querySelector('video');
+for (const b of document.querySelectorAll('button[data-at]')) b.addEventListener('click', () => {
+  const jump = () => { video.currentTime = Number(b.dataset.at); };
+  if (video.readyState > 0) jump();
+  else video.addEventListener('loadedmetadata', jump, {once:true});
+  video.play().catch(() => {});
+});</script></body></html>

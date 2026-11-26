@@ -2,7 +2,7 @@
 
 从史料写出旁白稿，先定配音，再排分镜和双语字幕，最后导出视频与观看页。仓库包含一个可离线运行的入门示例，以及《上海 · 城市纪事》的关键制作源码和 V11 配音返修案例。
 
-[公众号教程：从主动查资料到出片](article/article.md) · [HTML 排版版](article/shanghai-city-documentary.html) · [上海案例与源码](references/shanghai.md) · [制作手册](references/workflow.md)
+[公众号教程：四步做一条片（每步附成品）](article/article.md) · [HTML 排版版](article/shanghai-city-documentary.html) · [上海案例与源码](references/shanghai.md) · [制作手册](references/workflow.md)
 
 ## 先做一部 24 秒短片
 
@@ -41,7 +41,7 @@ python -X utf8 scripts/build.py --project path/to/project.json --narration path/
 git clone https://github.com/dailyoozoo/city-documentary-skill.git .agents/skills/city-documentary-skill
 ```
 
-分两次调用：第一次给城市、主题和片长，由 Agent 查资料、写编号旁白和来源表。第二次交定稿，有配音工具时按授权调用，没有时接已有录音或先做静音样片。Agent 标句界，主动检索可用画面、记录出处和许可，找不到合适素材再画图或调用图像生成工具做示意。两条可直接复制的提示词见[公众号教程](article/article.md)。
+分两次调用：第一次给城市、主题和片长，由 Agent 查资料、写编号旁白和来源表。第二次交定稿，有配音工具时按授权调用，没有时接已有录音或先做静音样片。Agent 标句界，主动检索可用画面、记录出处和许可，找不到合适素材再画图或调用图像生成工具做示意。四步提示词、旁白稿和可播放样片见[公众号教程](article/article.md)。
 
 将输入放在用户项目里，例如 `work/city-film/project.json`、`work/city-film/voice.wav` 和 `work/city-film/media/`；`image` 路径以 `project.json` 为基准，例如 `media/shot-01.jpg`。以下命令从**用户项目根目录**运行（与上面从 Skill 仓库根目录运行的示例不同）：
 

@@ -3,45 +3,116 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>用城市纪录片 Skill 出片：查资料、写稿、配音、剪视频</title>
-<meta name="description" content="给城市、主题和片长，由 Agent 查资料、写旁白、先配音、找画面并导出纪录短片。">
+<title>用城市纪录片 Skill 做一条片：四步，每步看成品</title>
+<meta name="description" content="用一条四镜头样片演示写旁白、配音标时、找画面和导出视频。每步附实际示例。">
 </head>
 <body style="margin:0;background:#e9ede5;font-family:system-ui,'PingFang SC','Microsoft YaHei',sans-serif;">
 <article style="box-sizing:border-box;max-width:672px;margin:0 auto;padding:clamp(16px,5vw,37px);background:#fbfaf5;">
-<header style="margin:0 0 19px;padding:18px 20px;background:#173d34;border-top:4px solid #b9844f;color:#fff7df;">
-<p style="margin:0 0 8px;color:#f2ce9d;font-size:13px;letter-spacing:.08em;">城市纪录片 · 快速上手</p>
-<h1 style="margin:0;font-size:clamp(23px,5.8vw,35px);line-height:1.36;text-wrap:balance;">用城市纪录片 Skill 出片：查资料、写稿、配音、剪视频</h1>
+<header style="margin:0 0 17px;padding:17px 18px;background:#173d34;border-top:4px solid #b9844f;color:#fff7df;">
+<p style="margin:0 0 8px;color:#f2ce9d;font-size:13px;letter-spacing:.08em;">城市纪录片 · 四步实操</p>
+<h1 style="margin:0;font-size:clamp(23px,5.8vw,35px);line-height:1.36;text-wrap:balance;">用城市纪录片 Skill 做一条片：四步，每步看成品</h1>
 </header>
 
-<p style="margin:0 0 15px;color:#29352f;font-size:16px;line-height:1.85;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">流程：Agent 查资料写稿 → 配音并标句界 → 搜图或做图 → 按声音排镜头 → 导出 MP4。</strong> 你给城市、主题和片长就能开工。下面以 30 秒样片为例，查资料和找画面都交给 Agent。</p>
-<h2 style="margin:29px 0 13px;padding-bottom:7px;border-bottom:1px solid #d8e1d8;color:#194538;font-size:22px;font-weight:750;line-height:1.4;">01｜把 Skill 装进项目</h2>
-<p style="margin:0 0 15px;color:#29352f;font-size:16px;line-height:1.85;overflow-wrap:anywhere;">在你自己的项目根目录运行下面的命令，再重新打开 Codex 项目会话。文章余下的命令也从<strong style="color:#174e40;font-weight:740;">这个根目录</strong>运行。</p>
-<pre style="box-sizing:border-box;max-width:100%;margin:0 0 16px;padding:13px 15px;background:#ebf0e9;border-left:3px solid #46715f;color:#173d34;white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;line-height:1.65;"><code style="font-family:Consolas,monospace;white-space:inherit;overflow-wrap:inherit;">git clone https://github.com/dailyoozoo/city-documentary-skill.git .agents/skills/city-documentary-skill
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;">在你的项目目录打开终端，运行下面这行，再重新打开这个项目的 Codex 会话。看到 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">.agents/skills/city-documentary-skill/SKILL.md</code>，就装好了。下面四步都在同一个 Codex 对话里做。</p>
+<pre style="box-sizing:border-box;max-width:100%;margin:0 0 16px;padding:12px 14px;background:#ebf0e9;border-left:3px solid #46715f;color:#173d34;white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;line-height:1.65;"><code style="font-family:Consolas,monospace;white-space:inherit;overflow-wrap:inherit;">git clone https://github.com/dailyoozoo/city-documentary-skill.git .agents/skills/city-documentary-skill
 </code></pre>
-<p style="margin:0 0 15px;color:#29352f;font-size:16px;line-height:1.85;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">产物：</strong> <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">.agents/skills/city-documentary-skill/</code>，里面有 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">SKILL.md</code>、示例和出片脚本。项目素材和成片另放 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">work/</code>、<code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">build/</code>，更新 Skill 时不影响它们。</p>
-<h2 style="margin:29px 0 13px;padding-bottom:7px;border-bottom:1px solid #d8e1d8;color:#194538;font-size:22px;font-weight:750;line-height:1.4;">02｜第一次调用：Agent 自己搜，写成旁白稿</h2>
-<blockquote style="margin:0 0 16px;padding:13px 15px;background:#edf2ea;border-left:3px solid #52806b;">
-<p style="margin:0;color:#29352f;font-size:15px;line-height:1.85;overflow-wrap:anywhere;">用 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">$city-documentary-skill</code> 做一条 30 秒的【城市】纪录短片，主题是【要讲的变化】。请自己上网找可信来源，写一份编号旁白和来源表，先交稿。缺证据的内容不要写进旁白。</p>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;">下面用虚构示例《沿河而生》演示：<strong style="color:#174e40;font-weight:740;">写稿 → 配音 → 找画面 → 出片</strong>。每步下面就是它的产物。</p>
+<h2 style="margin:30px 0 13px;padding-bottom:6px;border-bottom:1px solid #d8e1d8;color:#194538;font-size:22px;font-weight:750;line-height:1.4;">01｜写旁白</h2>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">你怎么做：</strong> 把城市、想讲的变化和片长填进这句话，发给 Codex：</p>
+<blockquote style="margin:0 0 14px;padding:12px 14px;background:#edf2ea;border-left:3px solid #52806b;">
+<p style="margin:0;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;">用 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">$city-documentary-skill</code> 做一条 24 秒短片，讲【城市】的【变化】。你自己查资料。先给我四句带编号的旁白和出处。</p>
 </blockquote>
-<p style="margin:0 0 15px;color:#29352f;font-size:16px;line-height:1.85;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">产物：</strong> <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">work/city-film/narration.md</code> 和 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">sources.tsv</code>。稿子按 01、02、03 编号，一行一句：<strong style="color:#174e40;font-weight:740;">先说在哪，再说原来怎样，最后讲变化</strong>。每句只讲一件事，地名读音和史实出处另外列。</p>
-<p style="margin:0 0 15px;color:#29352f;font-size:16px;line-height:1.85;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">注意：</strong> 查证到原始页面，记下链接和可支持的事实。拿到稿子出声读一遍，读不顺就改短，超时就删。定稿后进入配音。</p>
-<h2 style="margin:29px 0 13px;padding-bottom:7px;border-bottom:1px solid #d8e1d8;color:#194538;font-size:22px;font-weight:750;line-height:1.4;">03｜第二次调用：先配音、再找画面</h2>
-<blockquote style="margin:0 0 16px;padding:13px 15px;background:#edf2ea;border-left:3px solid #52806b;">
-<p style="margin:0;color:#29352f;font-size:15px;line-height:1.85;overflow-wrap:anywhere;">用 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">$city-documentary-skill</code> 继续。按 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">work/city-film/narration.md</code>，用【已授权的配音工具／我提供的录音】做旁白和句界。再按每句主动搜索可用的照片、地图或视频资料，没有合适素材再做示意图。把文件、来源和镜头表放进 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">work/city-film/</code>，最后导出到 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">build/city-film-v1/</code>。</p>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">产物：一份可以直接照着念的稿子。</strong> 每句只讲一件事。配音前，先确认地名、年份和不好念的字。示例稿长这样：</p>
+<section aria-label="旁白稿示例" style="margin:0 0 12px;padding:10px 13px;background:#f0eee3;border-left:3px solid #b58b58;"><p style="margin:0 0 4px;font-size:15px;line-height:1.7;color:#29352f;">01｜沿着河找一找，哪里最适合停船？</p><p style="margin:0 0 4px;font-size:15px;line-height:1.7;color:#29352f;">02｜码头有了人流，街道慢慢接到河岸。</p><p style="margin:0 0 4px;font-size:15px;line-height:1.7;color:#29352f;">03｜桥把两岸连在一起，人开始往对岸走。</p><p style="margin:0 0 4px;font-size:15px;line-height:1.7;color:#29352f;">04｜把四个时刻接起来，就看到了两岸的变化。</p></section>
+
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><a href="demo/narration.md" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">打开示例旁白稿</a></p>
+<h2 style="margin:30px 0 13px;padding-bottom:6px;border-bottom:1px solid #d8e1d8;color:#194538;font-size:22px;font-weight:750;line-height:1.4;">02｜先配音</h2>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">你怎么做：</strong> 稿子定下来后，接着发：</p>
+<blockquote style="margin:0 0 14px;padding:12px 14px;background:#edf2ea;border-left:3px solid #52806b;">
+<p style="margin:0;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;">按这四句配音。用我已授权的配音工具，或者我发的录音。给我一条干净的人声，再标出每句从哪秒到哪秒。</p>
 </blockquote>
-<p style="margin:0 0 15px;color:#29352f;font-size:16px;line-height:1.85;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">配音产物：</strong> <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">voice.wav</code> 和 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">timing.tsv</code>。已接入配音工具时，Agent 可以按编号合成、检查发音、拼成一条干净人声；有现成录音就直接用。Agent 按实际声音标每句开始和全段结束。比如第 02 句在 5.8 秒开始，第 03 句在 11.6 秒开始，第 02 句就占 5.8 秒。先听清地名、数字和停顿，再拿它定镜头。</p>
-<p style="margin:0 0 15px;color:#29352f;font-size:16px;line-height:1.85;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">画面产物：</strong> <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">media/</code>、补完的 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">sources.tsv</code>、<code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">storyboard.md</code> 和 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">project.json</code>。Agent 按句查图或找片段，打开原始来源核对年代、地点、许可和署名，把可用文件存下来。实拍适合交代现状，史料适合交代过去；找不到可用画面，就画地图、路线图或用生成工具做<strong style="color:#174e40;font-weight:740;">标明「示意」</strong>的画面。<code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">project.json</code> 里每镜写时长、中英文字幕、对应素材和来源；图片路径以它所在目录为准，例如 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">media/shot-01.jpg</code>。</p>
-<p style="margin:0 0 15px;color:#29352f;font-size:16px;line-height:1.85;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">注意：</strong> Skill 负责指挥 Agent 做这些事。联网搜索、语音合成和图片生成需要运行环境提供对应工具；没接入 TTS 时，可先交静音样片或接已有录音。许可不明的素材不进成片，也不需要你去找替代图，Agent 会继续搜或改用示意图。</p>
-<h2 style="margin:29px 0 13px;padding-bottom:7px;border-bottom:1px solid #d8e1d8;color:#194538;font-size:22px;font-weight:750;line-height:1.4;">04｜按录音出片，打开观看页验收</h2>
-<p style="margin:0 0 15px;color:#29352f;font-size:16px;line-height:1.85;overflow-wrap:anywhere;">由 Agent 执行。出片机需要 Python 3.11+、FFmpeg（含 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">libx264</code>，<code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">ffprobe</code> 可运行）和中文字体。第一次装依赖，之后直接构建：</p>
-<pre style="box-sizing:border-box;max-width:100%;margin:0 0 16px;padding:13px 15px;background:#ebf0e9;border-left:3px solid #46715f;color:#173d34;white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;line-height:1.65;"><code style="font-family:Consolas,monospace;white-space:inherit;overflow-wrap:inherit;">python -m pip install -r .agents/skills/city-documentary-skill/requirements.txt
-python -X utf8 .agents/skills/city-documentary-skill/scripts/build.py --project work/city-film/project.json --narration work/city-film/voice.wav --out build/city-film-v1
-python -X utf8 .agents/skills/city-documentary-skill/scripts/serve.py build/city-film-v1 --port 8765
-</code></pre>
-<p style="margin:0 0 15px;color:#29352f;font-size:16px;line-height:1.85;overflow-wrap:anywhere;">准备好输入文件后再执行。预览地址：<a href="http://127.0.0.1:8765/review.html" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">http://127.0.0.1:8765/review.html</a>。只做静音样片时，省略 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">--narration</code> 和它后面的音频路径。</p>
-<p style="margin:0 0 15px;color:#29352f;font-size:16px;line-height:1.85;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">产物：</strong> <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">build/city-film-v1/film.mp4</code>、<code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">subtitles.srt</code>、<code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">subtitles.vtt</code>、<code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">review.html</code> 和 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">verification.json</code>。脚本用分镜渲染图片或程序场景，把双语字幕和旁白合进 MP4。搜到的授权视频片段如果要保留动态，由 Agent 用 FFmpeg 按句界裁剪、统一画幅和帧率，再配回旁白和字幕，复查最终成片。入门脚本的 <code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">image</code> 镜头只收本地静态图。</p>
-<p style="margin:0 0 15px;color:#29352f;font-size:16px;line-height:1.85;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">注意：</strong> 输出目录每版换一个，时间轴别短于录音。先用观看页查句界、画面和字幕，再听一遍读音、音量和片尾。<code style="font-size:.9em;font-family:Consolas,monospace;color:#214f43;background:#e8efe7;padding:1px 3px;overflow-wrap:anywhere;">verification.json</code> 记录技术检查，哪里不好就报「句子编号 + 秒数」，让 Agent 改那一段。</p>
-<section style="margin:22px 0 0;padding:14px 15px;background:#e8efe7;border-top:2px solid #50806b;"><p style="margin:0 0 4px;color:#29352f;font-size:16px;line-height:1.85;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">GitHub｜城市纪录片制作 Skill</strong></p><p style="margin:0;color:#29352f;font-size:16px;line-height:1.85;overflow-wrap:anywhere;"><a href="https://github.com/dailyoozoo/city-documentary-skill" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">https://github.com/dailyoozoo/city-documentary-skill</a></p></section>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">产物：一条旁白 WAV，一张时间表。</strong> 后面按这张表切镜头。下表是静音示例的排镜时间；真正配音后，要按实录更新。</p>
+<table style="margin:0 0 15px;width:100%;border-collapse:collapse;font-size:14px;line-height:1.55;color:#29352f;">
+<thead>
+<tr>
+<th style="padding:8px 9px;background:#e6eee3;color:#174e40;text-align:left;font-weight:700;">句子</th>
+<th style="padding:8px 9px;background:#e6eee3;color:#174e40;text-align:left;font-weight:700;">开始</th>
+<th style="padding:8px 9px;background:#e6eee3;color:#174e40;text-align:left;font-weight:700;">结束</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">01</td>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">0 秒</td>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">6 秒</td>
+</tr>
+<tr>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">02</td>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">6 秒</td>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">12 秒</td>
+</tr>
+<tr>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">03</td>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">12 秒</td>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">18 秒</td>
+</tr>
+<tr>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">04</td>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">18 秒</td>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">24 秒</td>
+</tr>
+</tbody>
+</table>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><a href="demo/timing.tsv" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">下载示例时间表</a></p>
+<h2 style="margin:30px 0 13px;padding-bottom:6px;border-bottom:1px solid #d8e1d8;color:#194538;font-size:22px;font-weight:750;line-height:1.4;">03｜让 Agent 找画面</h2>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">你怎么做：</strong> 接着发：</p>
+<blockquote style="margin:0 0 14px;padding:12px 14px;background:#edf2ea;border-left:3px solid #52806b;">
+<p style="margin:0;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;">按时间表给每句话配一个画面。你去网上找能用的照片、地图或视频，记下出处和使用许可。找不到合适的就做示意图。先把分镜给我看。</p>
+</blockquote>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">产物：一份分镜和对应的画面。</strong> 图和片段都由 Agent 找；下面是本示例实际用上的四个镜头。</p>
+<table style="margin:0 0 15px;width:100%;border-collapse:collapse;font-size:14px;line-height:1.55;color:#29352f;">
+<thead>
+<tr>
+<th style="padding:8px 9px;background:#e6eee3;color:#174e40;text-align:left;font-weight:700;">编号</th>
+<th style="padding:8px 9px;background:#e6eee3;color:#174e40;text-align:left;font-weight:700;">时间</th>
+<th style="padding:8px 9px;background:#e6eee3;color:#174e40;text-align:left;font-weight:700;">画面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">01</td>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">0–6 秒</td>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">俯看河流和两岸</td>
+</tr>
+<tr>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">02</td>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">6–12 秒</td>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">拉近到码头，看到街道接到河岸</td>
+</tr>
+<tr>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">03</td>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">12–18 秒</td>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">切到桥，交代人怎么过河</td>
+</tr>
+<tr>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">04</td>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">18–24 秒</td>
+<td style="padding:8px 9px;border-bottom:1px solid #dce4da;vertical-align:top;">拉远，看到两岸连成一片</td>
+</tr>
+</tbody>
+</table>
+<figure style="margin:15px 0 12px;"><img alt="第 03 镜：桥把两岸连起来。画面是虚构河城示意。" height="540" src="still-bridge.jpg" style="width:100%;height:auto;display:block;border-radius:4px;" width="960"/><figcaption style="margin:6px 0 0;color:#536358;font-size:13px;line-height:1.6;">第 03 镜：桥把两岸连起来。画面是虚构河城示意。</figcaption></figure>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><a href="demo/storyboard.md" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">打开示例分镜</a></p>
+<h2 style="margin:30px 0 13px;padding-bottom:6px;border-bottom:1px solid #d8e1d8;color:#194538;font-size:22px;font-weight:750;line-height:1.4;">04｜让 Agent 出片</h2>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">你怎么做：</strong> 看完分镜，接着发：</p>
+<blockquote style="margin:0 0 14px;padding:12px 14px;background:#edf2ea;border-left:3px solid #52806b;">
+<p style="margin:0;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;">按分镜把画面剪到旁白上，加双语字幕。检查声音、字幕和画面对不对得上，再把 MP4、字幕和观看页发给我。缺出片工具就告诉我怎么装。</p>
+</blockquote>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">产物：能打开播放的成片、一份独立字幕、一个能按镜头跳转的观看页。</strong> 下面就是这四句、这四个镜头做出来的 24 秒样片。演示片是静音的，可以看画面和字幕怎么对应。</p>
+<p style="margin:0 0 14px;color:#29352f;font-size:15px;line-height:1.7;overflow-wrap:anywhere;">字幕长这样：<strong>0–6 秒｜沿着河找一找，哪里最适合停船？｜Follow the river. Where could a boat stop?</strong></p>
+<video aria-label="沿河而生，24 秒静音样片" controls="" playsinline="" poster="still-river.jpg" preload="metadata" src="demo/film.mp4" style="box-sizing:border-box;display:block;width:100%;height:auto;aspect-ratio:16/9;margin:4px 0 12px;border-radius:4px;background:#173d34;"></video>
+<p style="margin:0 0 14px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><a href="demo/film.mp4" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">下载样片 MP4</a> · <a href="demo/subtitles.srt" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">下载字幕 SRT</a> · <a href="demo/review.html" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">打开样片观看页</a></p>
+<section style="margin:20px 0 0;padding:13px 14px;background:#e8efe7;border-top:2px solid #50806b;"><p style="margin:0 0 4px;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><strong style="color:#174e40;font-weight:740;">GitHub｜城市纪录片制作 Skill</strong></p><p style="margin:0;color:#29352f;font-size:16px;line-height:1.8;overflow-wrap:anywhere;"><a href="https://github.com/dailyoozoo/city-documentary-skill" style="color:#1b5c4c;text-decoration:underline;overflow-wrap:anywhere;">https://github.com/dailyoozoo/city-documentary-skill</a></p></section>
 
 </article>
 </body>
