@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>上海城市历史变迁三维数字沙盘 · 6000年沧海桑田至现代化大都市</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/three.min.js"></script>
+  <script src="js/OrbitControls.js"></script>
+  <!-- Direct Offline Data to guarantee 100% reliable local loading with zero CORS errors -->
+  <script src="data/cmab_data.js"></script>
+  <script src="data/subtitles_data.js?v=r2"></script>
+</head>
+<body class="theme-cyan-gold">
+  <!-- 3D Canvas Container -->
+  <div id="canvas-container"></div>
+
+  <!-- Cinematic Letterbox Bars (Cinema Mode) -->
+  <div class="cinema-letterbox letterbox-top"></div>
+  <div class="cinema-letterbox letterbox-bottom"></div>
+
+  <!-- Top Navigation & Title Bar -->
+  <header class="top-nav" id="top-nav">
+    <div class="brand">
+      <div class="logo-mark">滬</div>
+      <div class="brand-text">
+        <h1>上海 · 城市历史变迁三维数字纪实</h1>
+        <p class="subtitle">黄浦江与苏州河交汇流域 · 空间演进与历史建筑全景沙盘</p>
+      </div>
+    </div>
+
+    <!-- Era Indicator -->
+    <div class="era-badge" id="current-era-badge">
+      <span class="badge-dot"></span>
+      <span class="badge-text" id="badge-era-text">全历史通览 · 6000年前 - 2026</span>
+    </div>
+
+    <!-- Mode & Theme Switchers -->
+    <div class="nav-controls">
+      <button class="mode-toggle-btn" id="btn-cinema-mode" title="切换影院宽银幕纯享模式">
+        <span class="mode-icon">🎬</span> 电影影院模式
+      </button>
+
+      <div class="theme-switcher">
+        <button class="theme-btn active" data-theme="cyan-gold">千里江山</button>
+        <button class="theme-btn" data-theme="night-cyber">夜上海·流光</button>
+        <button class="theme-btn" data-theme="golden-hour">晨曦金辉</button>
+        <button class="theme-btn" data-theme="ink-wash">江南水墨</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Left Sidebar: Historical Chapters & Controls -->
+  <aside class="left-panel" id="left-panel">
+    <div class="panel-section">
+      <h2 class="section-title"><span class="icon">📜</span> 历史纪实篇章 (Chapters)</h2>
+      <div class="chapter-list">
+        <div class="chapter-item active" data-chapter="0" data-time="0">
+          <div class="ch-num">序</div>
+          <div class="ch-info">
+            <div class="ch-name">江海初开 · 沧海成陆</div>
+            <div class="ch-time">00:00 - 01:10 | 寰宇深空至长江口古冈身</div>
+          </div>
+        </div>
+        <div class="chapter-item" data-chapter="1" data-time="70.7">
+          <div class="ch-num">壹</div>
+          <div class="ch-info">
+            <div class="ch-name">九里环城 · 江南名邑</div>
+            <div class="ch-time">01:10 - 02:28 | 1553筑城·豫园水榭·十六铺沙船</div>
+          </div>
+        </div>
+        <div class="chapter-item" data-chapter="2" data-time="148.7">
+          <div class="ch-num">贰</div>
+          <div class="ch-info">
+            <div class="ch-name">十里洋场 · 海派风华</div>
+            <div class="ch-time">02:28 - 04:01 | 1843开埠·外滩古典群·石库门里弄</div>
+          </div>
+        </div>
+        <div class="chapter-item" data-chapter="3" data-time="241.3">
+          <div class="ch-num">叁</div>
+          <div class="ch-info">
+            <div class="ch-name">星火觉醒 · 工业脊梁</div>
+            <div class="ch-time">04:01 - 05:19 | 1921初心·江南造船厂·万吨巨轮</div>
+          </div>
+        </div>
+        <div class="chapter-item" data-chapter="4" data-time="319.0">
+          <div class="ch-num">肆</div>
+          <div class="ch-info">
+            <div class="ch-name">跨江东进 · 浦东奇迹</div>
+            <div class="ch-time">05:19 - 06:50 | 1990跨江·东方明珠与陆家嘴摩天群</div>
+          </div>
+        </div>
+        <div class="chapter-item" data-chapter="5" data-time="410.0">
+          <div class="ch-num">终</div>
+          <div class="ch-info">
+            <div class="ch-name">古今交响 · 星辰大海</div>
+            <div class="ch-time">06:50 - 07:45 | 450年古今对望·卓越全球城市</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Playback Main Control -->
+    <div class="doc-control-box">
+      <button id="btn-play-doc" class="btn-primary">
+        <span class="play-icon">▶</span>
+        <span class="btn-text">播放全景纪实 (Gemini TTS 导览)</span>
+      </button>
+      <audio id="doc-audio" src="audio/master_soundtrack.mp3" preload="auto"></audio>
+    </div>
+
+    <!-- Architectural Attributes Layer Selector -->
+    <div class="panel-section">
+      <h2 class="section-title"><span class="icon">🏛</span> 历史建筑属性着色模式</h2>
+      <div class="attr-mode-btns">
+        <button class="attr-btn active" data-mode="age">建筑年代 (Age)</button>
+        <button class="attr-btn" data-mode="function">功能业态 (Function)</button>
+        <button class="attr-btn" data-mode="structure">建筑结构 (Structure)</button>
+        <button class="attr-btn" data-mode="height">高度梯度 (Height)</button>
+      </div>
+    </div>
+
+    <!-- Stats Summary -->
+    <div class="stats-box">
+      <div class="stat-item">
+        <div class="stat-val" id="stat-buildings">2,657</div>
+        <div class="stat-lbl">建筑单体模型</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">632 m</div>
+        <div class="stat-lbl">上海中心极高</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-val">6000 余年</div>
+        <div class="stat-lbl">地理文明跨度</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Right Floating HUD: Architectural Inspector -->
+  <aside class="right-hud" id="hud-inspector">
+    <div class="hud-header">
+      <div class="hud-tag">上海历史建筑空间测绘与档案</div>
+      <h3 id="hud-bldg-name">上海中心大厦 (Shanghai Tower)</h3>
+    </div>
+    <div class="hud-grid">
+      <div class="hud-cell">
+        <span class="hud-lbl">编码 (Merged ID)</span>
+        <span class="hud-val code" id="hud-bldg-id">CMAB_SH_002657</span>
+      </div>
+      <div class="hud-cell">
+        <span class="hud-lbl">测绘高度 (Height)</span>
+        <span class="hud-val highlight" id="hud-bldg-height">632.0 米</span>
+      </div>
+      <div class="hud-cell">
+        <span class="hud-lbl">历史年代 (Age)</span>
+        <span class="hud-val" id="hud-bldg-age">AF2010 (新时代卓越期)</span>
+      </div>
+      <div class="hud-cell">
+        <span class="hud-lbl">功能分类 (Function)</span>
+        <span class="hud-val" id="hud-bldg-func">Office (商务金融中心)</span>
+      </div>
+      <div class="hud-cell">
+        <span class="hud-lbl">结构类型 (Structure)</span>
+        <span class="hud-val" id="hud-bldg-struct">Megastructure-Glass</span>
+      </div>
+      <div class="hud-cell">
+        <span class="hud-lbl">风貌评分 (Quality)</span>
+        <span class="hud-val" id="hud-bldg-quality">0.98 / 1.00</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Historical Art & Archival Inset Card -->
+  <div class="art-card" id="art-card">
+    <div class="art-card-inner">
+      <div class="art-card-img-wrap">
+        <img id="art-card-img" src="images/earth_eastern.jpg" alt="历史典藏">
+        <div class="art-card-badge" id="art-card-badge">寰宇定标 · 北纬31°14' 东经121°29'</div>
+      </div>
+      <div class="art-card-text">
+        <h4 id="art-card-title">东亚大陆东缘 · 江海交汇坐标</h4>
+        <p id="art-card-desc">自深空锁定中国疆域东海岸线中枢，万里长江与浩瀚东海在此交汇激荡。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cinematic Fullscreen Historical Overlay (Triggers during high-impact chapter transitions) -->
+  <div class="cinema-modal-overlay" id="cinema-modal-overlay">
+    <div class="cinema-modal-content">
+      <div class="cinema-modal-img-wrap">
+        <img id="cinema-modal-img" src="images/huxinting_vintage.jpg" alt="历史典藏大图">
+        <div class="cinema-modal-tag" id="cinema-modal-tag">明清古典园林典范</div>
+      </div>
+      <div class="cinema-modal-info">
+        <h2 id="cinema-modal-title">豫园 · 湖心亭与九曲桥</h2>
+        <p id="cinema-modal-desc">明嘉靖年间肇建豫园，湖心水榭掩映于重檐翘角与曲栏碧波之间。十六铺千帆竞发，铸就东南名邑繁盛气象。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Floating Subtitle Bar (Bilingual Highlight Subtitles) -->
+  <footer class="bottom-subtitle-bar" id="subtitle-bar">
+    <div class="chapter-watermark" id="sub-chapter-watermark">序幕 · 江海初开 沧海成陆</div>
+    <div class="sub-cn" id="sub-cn">从浩瀚太空俯瞰东亚大陆，北纬三十一度，正是万里长江奔流入海的终点。</div>
+    <div class="sub-en" id="sub-en">From deep space looking down upon East Asia at 31 degrees North lies the grand estuary where the mighty Yangtze meets the sea.</div>
+
+    <!-- Timeline Scrubber -->
+    <div class="timeline-container">
+      <span class="time-label" id="time-current">00:00</span>
+      <input type="range" id="timeline-slider" min="0" max="465.92" step="0.05" value="0">
+      <span class="time-label" id="time-total">07:45</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=r2-final"></script>
+</body>
+</html>

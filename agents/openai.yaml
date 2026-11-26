@@ -1,0 +1,4 @@
+interface:
+  display_name: "城市纪录片制作"
+  short_description: "从史料研究、镜头设计与旁白对齐做出可审阅的城市纪录短片"
+  default_prompt: "用 $city-documentary-skill 做一段关于城市河岸变迁的 30 秒样片，先交付分镜和来源清单。"

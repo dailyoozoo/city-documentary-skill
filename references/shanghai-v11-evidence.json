@@ -1,0 +1,22 @@
+{
+  "case": "Shanghai city documentary V11 narration correction, 2026-11-22",
+  "video_sha256": "2b34df3e7a8722aed98b9f80ddf6a340474f16a68d63d97682ea595d9031f2e3",
+  "seconds": 522.208333,
+  "video_frames": 12533,
+  "identical_video_payload_and_pts_dts_packets": 12533,
+  "audio_pts_dts_packets_compared": 24480,
+  "audio_nominal_duration_matches": 24479,
+  "same_effective_audio_end": true,
+  "user_reported_terms": 13,
+  "replacement_windows": 12,
+  "replacement_seconds": 88.545,
+  "voice": "Achernar",
+  "authorized_tts_requests": 2,
+  "tts_retries": 0,
+  "full_decode_passed": true,
+  "detected_clipping_samples": 0,
+  "ui_coverage": "six chapters, thirteen correction jumps, twenty-four comparison audio controls, desktop and narrow layouts, end playback",
+  "continuous_playback_in_this_version": false,
+  "human_listening_in_this_version": false,
+  "provenance": "Summary transcribed from the project's final V11 correction QA and delivery report; the source media are not distributed in this repository."
+}

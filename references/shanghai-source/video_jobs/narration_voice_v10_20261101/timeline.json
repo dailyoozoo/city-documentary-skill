@@ -1,0 +1,1067 @@
+[
+  {
+    "start": 0,
+    "end": 4.37,
+    "kind": "cosmic",
+    "target": "",
+    "label": "",
+    "detail": false
+  },
+  {
+    "start": 4.37,
+    "end": 7.59,
+    "kind": "photo",
+    "target": "nasa_yangtze_2020.jpg",
+    "label": "长江入海口 · 悬浮泥沙",
+    "detail": false
+  },
+  {
+    "start": 7.59,
+    "end": 14.86,
+    "kind": "journey",
+    "target": "",
+    "label": "六千三百公里",
+    "detail": false
+  },
+  {
+    "start": 14.86,
+    "end": 20.36,
+    "kind": "photo",
+    "target": "ma_yuan_sea.jpg",
+    "label": "六千年前 · 海陆变迁意象",
+    "detail": false
+  },
+  {
+    "start": 20.36,
+    "end": 26.82,
+    "kind": "coastline",
+    "target": "",
+    "label": "海岸线东移示意",
+    "detail": false
+  },
+  {
+    "start": 26.82,
+    "end": 32.17,
+    "kind": "origin",
+    "target": "",
+    "label": "春申 · 水脉城源",
+    "detail": false
+  },
+  {
+    "start": 32.17,
+    "end": 38.17,
+    "kind": "hu",
+    "target": "",
+    "label": "列竹捕鱼 · 沪",
+    "detail": false
+  },
+  {
+    "start": 38.17,
+    "end": 49.33,
+    "kind": "rivers",
+    "target": "",
+    "label": "黄浦夺淞 · 水系关系示意",
+    "detail": false
+  },
+  {
+    "start": 49.33,
+    "end": 54.71,
+    "kind": "year",
+    "target": "",
+    "label": "1292 · 上海设县",
+    "detail": false
+  },
+  {
+    "start": 54.71,
+    "end": 61.21,
+    "kind": "photo",
+    "target": "map_1884_oldcity.jpg",
+    "label": "老城厢位置 · 后世舆图参照",
+    "detail": false
+  },
+  {
+    "start": 61.21,
+    "end": 65.49,
+    "kind": "model",
+    "target": "junks",
+    "label": "舟楫之便 · 沙船结构",
+    "detail": true
+  },
+  {
+    "start": 65.49,
+    "end": 70.68,
+    "kind": "model",
+    "target": "shiliupu",
+    "label": "江南港埠 · 沿水成街",
+    "detail": false
+  },
+  {
+    "start": 70.68,
+    "end": 74.91,
+    "kind": "oldcity",
+    "target": "oldcity",
+    "label": "九里环城",
+    "detail": false,
+    "p0": [
+      180,
+      1300,
+      2160
+    ],
+    "p1": [
+      80,
+      1240,
+      2070
+    ],
+    "t0": [
+      -1000,
+      0,
+      990
+    ],
+    "t1": [
+      -1060,
+      0,
+      970
+    ]
+  },
+  {
+    "start": 74.91,
+    "end": 81.37,
+    "kind": "oldcity",
+    "target": "oldcity",
+    "label": "黄浦江西岸 · 城池初形",
+    "detail": false,
+    "p0": [
+      -120,
+      1170,
+      2010
+    ],
+    "p1": [
+      -210,
+      1130,
+      1970
+    ],
+    "t0": [
+      -1110,
+      0,
+      950
+    ],
+    "t1": [
+      -1150,
+      0,
+      950
+    ]
+  },
+  {
+    "start": 81.37,
+    "end": 85.35,
+    "kind": "oldcity",
+    "target": "oldcity",
+    "label": "九里城墙 · 渐次围合",
+    "detail": false,
+    "p0": [
+      -880,
+      1050,
+      1930
+    ],
+    "p1": [
+      -960,
+      980,
+      1890
+    ],
+    "t0": [
+      -1320,
+      12,
+      950
+    ],
+    "t1": [
+      -1320,
+      12,
+      950
+    ]
+  },
+  {
+    "start": 85.35,
+    "end": 89.35,
+    "kind": "oldcity",
+    "target": "oldcity",
+    "label": "青砖城台",
+    "detail": false,
+    "p0": [
+      -410,
+      195,
+      1270
+    ],
+    "p1": [
+      -465,
+      165,
+      1230
+    ],
+    "t0": [
+      -815,
+      15,
+      975
+    ],
+    "t1": [
+      -835,
+      15,
+      965
+    ]
+  },
+  {
+    "start": 89.35,
+    "end": 92.5,
+    "kind": "oldcity",
+    "target": "oldcity",
+    "label": "护城河 · 一城六门",
+    "detail": false,
+    "p0": [
+      -1140,
+      1290,
+      1810
+    ],
+    "p1": [
+      -1210,
+      1230,
+      1810
+    ],
+    "t0": [
+      -1320,
+      12,
+      950
+    ],
+    "t1": [
+      -1320,
+      12,
+      950
+    ]
+  },
+  {
+    "start": 92.5,
+    "end": 95.93,
+    "kind": "oldcity",
+    "target": "oldcity",
+    "label": "粉墙黛瓦",
+    "detail": false,
+    "p0": [
+      -1190,
+      62,
+      1320
+    ],
+    "p1": [
+      -1260,
+      45,
+      1300
+    ],
+    "t0": [
+      -1420,
+      10,
+      1180
+    ],
+    "t1": [
+      -1445,
+      12,
+      1180
+    ]
+  },
+  {
+    "start": 95.93,
+    "end": 100.22,
+    "kind": "oldcity",
+    "target": "oldcity",
+    "label": "城厢东北隅 · 豫园",
+    "detail": false,
+    "p0": [
+      -940,
+      265,
+      1240
+    ],
+    "p1": [
+      -1090,
+      155,
+      1065
+    ],
+    "t0": [
+      -1266,
+      8,
+      851
+    ],
+    "t1": [
+      -1266,
+      11,
+      851
+    ]
+  },
+  {
+    "start": 100.22,
+    "end": 105.32,
+    "kind": "oldcity",
+    "target": "oldcity",
+    "label": "亭阁与重檐",
+    "detail": false,
+    "p0": [
+      -1180,
+      72,
+      975
+    ],
+    "p1": [
+      -1198,
+      58,
+      948
+    ],
+    "t0": [
+      -1266,
+      14,
+      851
+    ],
+    "t1": [
+      -1266,
+      17,
+      851
+    ]
+  },
+  {
+    "start": 105.32,
+    "end": 109.0,
+    "kind": "oldcity",
+    "target": "oldcity",
+    "label": "九曲朱栏",
+    "detail": false,
+    "p0": [
+      -1208,
+      42,
+      947
+    ],
+    "p1": [
+      -1222,
+      35,
+      939
+    ],
+    "t0": [
+      -1257,
+      10,
+      875
+    ],
+    "t1": [
+      -1262,
+      12,
+      871
+    ]
+  },
+  {
+    "start": 109.0,
+    "end": 113.68,
+    "kind": "photo",
+    "target": "huxinting_vintage.jpg",
+    "label": "湖心亭 · 历史建筑影像",
+    "detail": false
+  },
+  {
+    "start": 113.68,
+    "end": 117.64,
+    "kind": "photo",
+    "target": "yuyuan_classical.jpg",
+    "label": "豫园游廊 · 当代实景参照",
+    "detail": false
+  },
+  {
+    "start": 117.64,
+    "end": 121.29,
+    "kind": "model",
+    "target": "garden",
+    "label": "从园林到城厢",
+    "detail": false,
+    "shot": "s12_fly_over_east_gate_to_shiliupu"
+  },
+  {
+    "start": 121.29,
+    "end": 124.94,
+    "kind": "model",
+    "target": "oldcity",
+    "label": "城厢与江岸",
+    "detail": false,
+    "shot": "s12_fly_over_east_gate_to_shiliupu"
+  },
+  {
+    "start": 124.94,
+    "end": 128.59,
+    "kind": "model",
+    "target": "shiliupu",
+    "label": "抵近十六铺",
+    "detail": false,
+    "shot": "s12_fly_over_east_gate_to_shiliupu"
+  },
+  {
+    "start": 128.59,
+    "end": 132.66,
+    "kind": "model",
+    "target": "shiliupu",
+    "label": "十六铺码头",
+    "detail": false,
+    "shot": "s13_shiliupu_wharf_junks_closeup"
+  },
+  {
+    "start": 132.66,
+    "end": 136.73,
+    "kind": "model",
+    "target": "junks",
+    "label": "沙船与码头",
+    "detail": false,
+    "shot": "s13_shiliupu_wharf_junks_closeup"
+  },
+  {
+    "start": 136.73,
+    "end": 140.8,
+    "kind": "model",
+    "target": "junks",
+    "label": "帆樯结构",
+    "detail": true,
+    "shot": "s13_shiliupu_wharf_junks_closeup"
+  },
+  {
+    "start": 140.8,
+    "end": 143.42667,
+    "kind": "model",
+    "target": "oldcity",
+    "label": "城池与商港",
+    "detail": false,
+    "shot": "s14_oldcity_and_river_grand_vista"
+  },
+  {
+    "start": 143.42667,
+    "end": 146.05333,
+    "kind": "model",
+    "target": "shiliupu",
+    "label": "江岸贸易空间",
+    "detail": false,
+    "shot": "s14_oldcity_and_river_grand_vista"
+  },
+  {
+    "start": 146.05333,
+    "end": 148.68,
+    "kind": "photo",
+    "target": "map_1884_full.jpg",
+    "label": "城与江 · 后世舆图参照",
+    "detail": false,
+    "shot": "s14_oldcity_and_river_grand_vista"
+  },
+  {
+    "start": 148.68,
+    "end": 153.54667,
+    "kind": "model",
+    "target": "bund",
+    "label": "沿江西行与外滩",
+    "detail": false,
+    "shot": "s15_ch2_north_along_huangpu_to_bund"
+  },
+  {
+    "start": 153.54667,
+    "end": 158.41333,
+    "kind": "photo",
+    "target": "bund_1930.jpg",
+    "label": "外滩 · 历史影像",
+    "detail": false,
+    "shot": "s15_ch2_north_along_huangpu_to_bund"
+  },
+  {
+    "start": 158.41333,
+    "end": 163.28,
+    "kind": "photo",
+    "target": "bund_1930.jpg",
+    "label": "建筑群与江岸",
+    "detail": true,
+    "shot": "s15_ch2_north_along_huangpu_to_bund"
+  },
+  {
+    "start": 163.28,
+    "end": 167.51333,
+    "kind": "model",
+    "target": "waibaidu",
+    "label": "苏州河口 · 外白渡桥",
+    "detail": false,
+    "shot": "s16_waibaidu_bridge_confluence"
+  },
+  {
+    "start": 167.51333,
+    "end": 171.74667,
+    "kind": "photo",
+    "target": "waibaidu_vintage.jpg",
+    "label": "钢桥结构 · 历史影像",
+    "detail": false,
+    "shot": "s16_waibaidu_bridge_confluence"
+  },
+  {
+    "start": 171.74667,
+    "end": 175.98,
+    "kind": "photo",
+    "target": "waibaidu_vintage.jpg",
+    "label": "桥体观察",
+    "detail": true,
+    "shot": "s16_waibaidu_bridge_confluence"
+  },
+  {
+    "start": 175.98,
+    "end": 180.40333,
+    "kind": "model",
+    "target": "bund",
+    "label": "外滩建筑群",
+    "detail": false,
+    "shot": "s17_bund_neoclassical_corridor"
+  },
+  {
+    "start": 180.40333,
+    "end": 184.82667,
+    "kind": "photo",
+    "target": "bund_1930.jpg",
+    "label": "近代建筑沿江展开",
+    "detail": false,
+    "shot": "s17_bund_neoclassical_corridor"
+  },
+  {
+    "start": 184.82667,
+    "end": 189.25,
+    "kind": "model",
+    "target": "hsbc",
+    "label": "石筑立面与柱廊",
+    "detail": false,
+    "shot": "s17_bund_neoclassical_corridor"
+  },
+  {
+    "start": 189.25,
+    "end": 193.45,
+    "kind": "model",
+    "target": "peace_hotel",
+    "label": "和平饭店",
+    "detail": false,
+    "shot": "s18_peace_hotel_and_customs_clock"
+  },
+  {
+    "start": 193.45,
+    "end": 194.81,
+    "kind": "photo",
+    "target": "peace_hotel.jpg",
+    "label": "和平饭店 · 当代参照",
+    "detail": false,
+    "shot": "s18_peace_hotel_and_customs_clock"
+  },
+  {
+    "start": 194.81,
+    "end": 202.22,
+    "kind": "photo",
+    "target": "customs_house_modern.jpg",
+    "label": "江海关钟楼 · 当代参照",
+    "detail": false,
+    "shot": "s18_peace_hotel_and_customs_clock"
+  },
+  {
+    "start": 202.22,
+    "end": 206.67333,
+    "kind": "model",
+    "target": "hsbc",
+    "label": "汇丰银行大楼",
+    "detail": false,
+    "shot": "s19_hsbc_classical_dome_closeup"
+  },
+  {
+    "start": 206.67333,
+    "end": 211.12667,
+    "kind": "photo",
+    "target": "hsbc_building.jpg",
+    "label": "穹顶与古典立面",
+    "detail": false,
+    "shot": "s19_hsbc_classical_dome_closeup"
+  },
+  {
+    "start": 211.12667,
+    "end": 215.58,
+    "kind": "photo",
+    "target": "hsbc_building.jpg",
+    "label": "穹顶与柱廊",
+    "detail": true,
+    "shot": "s19_hsbc_classical_dome_closeup"
+  },
+  {
+    "start": 215.58,
+    "end": 220.41,
+    "kind": "model",
+    "target": "shikumen",
+    "label": "进入石库门街巷",
+    "detail": false,
+    "shot": "s20_west_into_shikumen_lanes"
+  },
+  {
+    "start": 220.41,
+    "end": 225.24,
+    "kind": "model",
+    "target": "shikumen",
+    "label": "门框与院落",
+    "detail": true,
+    "shot": "s20_west_into_shikumen_lanes"
+  },
+  {
+    "start": 225.24,
+    "end": 230.07,
+    "kind": "photo",
+    "target": "cpc_first_congress.jpg",
+    "label": "石库门建筑形制 · 当代参照",
+    "detail": false,
+    "shot": "s20_west_into_shikumen_lanes"
+  },
+  {
+    "start": 230.07,
+    "end": 235.71,
+    "kind": "photo",
+    "target": "nanjing_rd_1930.jpg",
+    "label": "南京路 · 历史影像",
+    "detail": false,
+    "shot": "s21_nanjing_road_haipai_vista"
+  },
+  {
+    "start": 235.71,
+    "end": 241.35,
+    "kind": "photo",
+    "target": "nanjing_rd_1930.jpg",
+    "label": "街道与都市生活",
+    "detail": true,
+    "shot": "s21_nanjing_road_haipai_vista"
+  },
+  {
+    "start": 241.35,
+    "end": 245.62667,
+    "kind": "model",
+    "target": "shikumen",
+    "label": "浦西里弄",
+    "detail": false,
+    "shot": "s22_ch3_puxi_shikumen_to_xingye"
+  },
+  {
+    "start": 245.62667,
+    "end": 249.90333,
+    "kind": "model",
+    "target": "cpc_site",
+    "label": "兴业路 · 石库门小楼",
+    "detail": false,
+    "shot": "s22_ch3_puxi_shikumen_to_xingye"
+  },
+  {
+    "start": 249.90333,
+    "end": 254.18,
+    "kind": "photo",
+    "target": "cpc_first_congress.jpg",
+    "label": "兴业路建筑 · 当代参照",
+    "detail": false,
+    "shot": "s22_ch3_puxi_shikumen_to_xingye"
+  },
+  {
+    "start": 254.18,
+    "end": 259.13,
+    "kind": "photo",
+    "target": "cpc_first_congress.jpg",
+    "label": "中共一大会址 · 当代参照",
+    "detail": false,
+    "shot": "s23_xingye_rd_76_shikumen_closeup"
+  },
+  {
+    "start": 259.13,
+    "end": 264.08,
+    "kind": "photo",
+    "target": "cpc_first_congress.jpg",
+    "label": "青红砖与石框门头",
+    "detail": true,
+    "shot": "s23_xingye_rd_76_shikumen_closeup"
+  },
+  {
+    "start": 264.08,
+    "end": 269.03,
+    "kind": "model",
+    "target": "cpc_site",
+    "label": "石库门形制示意",
+    "detail": false,
+    "shot": "s23_xingye_rd_76_shikumen_closeup"
+  },
+  {
+    "start": 269.03,
+    "end": 273.13333,
+    "kind": "model",
+    "target": "bund",
+    "label": "城市新生 · 空间示意",
+    "detail": false,
+    "shot": "s24_1949_dawn_citywide_rebirth"
+  },
+  {
+    "start": 273.13333,
+    "end": 277.23667,
+    "kind": "model",
+    "target": "shipyard",
+    "label": "由商港走向工业",
+    "detail": false,
+    "shot": "s24_1949_dawn_citywide_rebirth"
+  },
+  {
+    "start": 277.23667,
+    "end": 281.34,
+    "kind": "photo",
+    "target": "jiangnan_shipyard.jpg",
+    "label": "工业基地 · 当代厂区参照",
+    "detail": false,
+    "shot": "s24_1949_dawn_citywide_rebirth"
+  },
+  {
+    "start": 281.34,
+    "end": 286.06,
+    "kind": "model",
+    "target": "gantry",
+    "label": "龙门吊与船台",
+    "detail": false,
+    "shot": "s25_jiangnan_shipyard_gantry_cranes"
+  },
+  {
+    "start": 286.06,
+    "end": 290.78,
+    "kind": "model",
+    "target": "gantry",
+    "label": "起重结构",
+    "detail": true,
+    "shot": "s25_jiangnan_shipyard_gantry_cranes"
+  },
+  {
+    "start": 290.78,
+    "end": 295.5,
+    "kind": "photo",
+    "target": "jiangnan_shipyard.jpg",
+    "label": "造船工业 · 厂区参照",
+    "detail": false,
+    "shot": "s25_jiangnan_shipyard_gantry_cranes"
+  },
+  {
+    "start": 295.5,
+    "end": 299.15,
+    "kind": "model",
+    "target": "freighter",
+    "label": "巨轮驶向江海",
+    "detail": false,
+    "shot": "s26_ocean_freighter_sailing_huangpu"
+  },
+  {
+    "start": 299.15,
+    "end": 302.8,
+    "kind": "model",
+    "target": "freighter",
+    "label": "甲板与上层建筑",
+    "detail": true,
+    "shot": "s26_ocean_freighter_sailing_huangpu"
+  },
+  {
+    "start": 302.8,
+    "end": 306.45,
+    "kind": "model",
+    "target": "freighter",
+    "label": "上海制造 · 远航",
+    "detail": false,
+    "shot": "s26_ocean_freighter_sailing_huangpu"
+  },
+  {
+    "start": 306.45,
+    "end": 312.725,
+    "kind": "model",
+    "target": "puxi",
+    "label": "浦西城市密度",
+    "detail": false,
+    "shot": "s27_puxi_vs_pudong_pre1990_contrast"
+  },
+  {
+    "start": 312.725,
+    "end": 319.0,
+    "kind": "model",
+    "target": "pudong_before",
+    "label": "隔江望向浦东",
+    "detail": false,
+    "shot": "s27_puxi_vs_pudong_pre1990_contrast"
+  },
+  {
+    "start": 319.0,
+    "end": 323.85333,
+    "kind": "model",
+    "target": "pudong_before",
+    "label": "跨江东进",
+    "detail": false,
+    "shot": "s28_ch4_cross_huangpu_to_pudong"
+  },
+  {
+    "start": 323.85333,
+    "end": 328.70667,
+    "kind": "model",
+    "target": "pudong_before",
+    "label": "陆家嘴 · 开发示意",
+    "detail": false,
+    "shot": "s28_ch4_cross_huangpu_to_pudong"
+  },
+  {
+    "start": 328.70667,
+    "end": 333.56,
+    "kind": "model",
+    "target": "cross_bridge",
+    "label": "从两岸到连接",
+    "detail": false,
+    "shot": "s28_ch4_cross_huangpu_to_pudong"
+  },
+  {
+    "start": 333.56,
+    "end": 337.66,
+    "kind": "model",
+    "target": "cross_bridge",
+    "label": "跨江大桥",
+    "detail": false,
+    "shot": "s29_river_bridges_and_avenues"
+  },
+  {
+    "start": 337.66,
+    "end": 341.76,
+    "kind": "model",
+    "target": "cross_bridge",
+    "label": "桥塔与拉索",
+    "detail": true,
+    "shot": "s29_river_bridges_and_avenues"
+  },
+  {
+    "start": 341.76,
+    "end": 345.86,
+    "kind": "model",
+    "target": "avenue",
+    "label": "世纪大道 · 空间示意",
+    "detail": false,
+    "shot": "s29_river_bridges_and_avenues"
+  },
+  {
+    "start": 345.86,
+    "end": 350.23333,
+    "kind": "model",
+    "target": "oriental_pearl",
+    "label": "东方明珠 · 形制生成",
+    "detail": false,
+    "shot": "s30_oriental_pearl_1994_rise"
+  },
+  {
+    "start": 350.23333,
+    "end": 354.60667,
+    "kind": "model",
+    "target": "oriental_pearl",
+    "label": "球体与支撑结构",
+    "detail": true,
+    "shot": "s30_oriental_pearl_1994_rise"
+  },
+  {
+    "start": 354.60667,
+    "end": 358.98,
+    "kind": "photo",
+    "target": "oriental_pearl.jpg",
+    "label": "东方明珠 · 当代实景",
+    "detail": false,
+    "shot": "s30_oriental_pearl_1994_rise"
+  },
+  {
+    "start": 358.98,
+    "end": 363.74667,
+    "kind": "model",
+    "target": "jin_mao",
+    "label": "金茂大厦 · 形制生成",
+    "detail": false,
+    "shot": "s31_jin_mao_1999_pagoda_rise"
+  },
+  {
+    "start": 363.74667,
+    "end": 368.51333,
+    "kind": "model",
+    "target": "jin_mao",
+    "label": "退台式塔身",
+    "detail": true,
+    "shot": "s31_jin_mao_1999_pagoda_rise"
+  },
+  {
+    "start": 368.51333,
+    "end": 373.28,
+    "kind": "photo",
+    "target": "jin_mao_tower.jpg",
+    "label": "金茂大厦 · 当代实景",
+    "detail": false,
+    "shot": "s31_jin_mao_1999_pagoda_rise"
+  },
+  {
+    "start": 373.28,
+    "end": 377.04667,
+    "kind": "model",
+    "target": "swfc",
+    "label": "环球金融中心 · 形制生成",
+    "detail": false,
+    "shot": "s32_swfc_2008_skybridge_rise"
+  },
+  {
+    "start": 377.04667,
+    "end": 380.81333,
+    "kind": "model",
+    "target": "swfc",
+    "label": "顶部风洞结构",
+    "detail": true,
+    "shot": "s32_swfc_2008_skybridge_rise"
+  },
+  {
+    "start": 380.81333,
+    "end": 384.58,
+    "kind": "photo",
+    "target": "swfc_tower.jpg",
+    "label": "环球金融中心 · 当代实景",
+    "detail": false,
+    "shot": "s32_swfc_2008_skybridge_rise"
+  },
+  {
+    "start": 384.58,
+    "end": 388.94,
+    "kind": "model",
+    "target": "shanghai_tower",
+    "label": "上海中心 · 形制生成",
+    "detail": false,
+    "shot": "s33_shanghai_tower_2015_spiral"
+  },
+  {
+    "start": 388.94,
+    "end": 393.3,
+    "kind": "model",
+    "target": "shanghai_tower",
+    "label": "螺旋塔身",
+    "detail": true,
+    "shot": "s33_shanghai_tower_2015_spiral"
+  },
+  {
+    "start": 393.3,
+    "end": 397.66,
+    "kind": "photo",
+    "target": "shanghai_tower.jpg",
+    "label": "上海中心 · 当代实景",
+    "detail": false,
+    "shot": "s33_shanghai_tower_2015_spiral"
+  },
+  {
+    "start": 397.66,
+    "end": 401.77667,
+    "kind": "model",
+    "target": "skyline",
+    "label": "浦东天际线",
+    "detail": false,
+    "shot": "s34_lujiazui_and_bund_panorama"
+  },
+  {
+    "start": 401.77667,
+    "end": 405.89333,
+    "kind": "photo",
+    "target": "lujiazui_skyline.jpg",
+    "label": "陆家嘴 · 当代实景",
+    "detail": false,
+    "shot": "s34_lujiazui_and_bund_panorama"
+  },
+  {
+    "start": 405.89333,
+    "end": 410.01,
+    "kind": "eras",
+    "target": "",
+    "label": "历史与当代 · 不同视角对照",
+    "detail": false,
+    "shot": "s34_lujiazui_and_bund_panorama"
+  },
+  {
+    "start": 410.01,
+    "end": 413.65667,
+    "kind": "model",
+    "target": "skyline",
+    "label": "古今交响",
+    "detail": false,
+    "shot": "s35_epilogue_golden_dusk_overview"
+  },
+  {
+    "start": 413.65667,
+    "end": 417.30333,
+    "kind": "photo",
+    "target": "bund_from_swfc_bluehour.jpg",
+    "label": "暮色浦江",
+    "detail": false,
+    "shot": "s35_epilogue_golden_dusk_overview"
+  },
+  {
+    "start": 417.30333,
+    "end": 420.95,
+    "kind": "model",
+    "target": "garden",
+    "label": "回到园林",
+    "detail": false,
+    "shot": "s35_epilogue_golden_dusk_overview"
+  },
+  {
+    "start": 420.95,
+    "end": 424.87667,
+    "kind": "model",
+    "target": "garden",
+    "label": "豫园飞檐",
+    "detail": false,
+    "shot": "s36_yuyuan_eaves_to_lujiazui_telephoto"
+  },
+  {
+    "start": 424.87667,
+    "end": 428.80333,
+    "kind": "photo",
+    "target": "yuyuan_classical.jpg",
+    "label": "古典园林 · 当代参照",
+    "detail": false,
+    "shot": "s36_yuyuan_eaves_to_lujiazui_telephoto"
+  },
+  {
+    "start": 428.80333,
+    "end": 432.73,
+    "kind": "photo",
+    "target": "lujiazui_skyline.jpg",
+    "label": "陆家嘴天际线 · 当代参照",
+    "detail": false,
+    "shot": "s36_yuyuan_eaves_to_lujiazui_telephoto"
+  },
+  {
+    "start": 432.73,
+    "end": 437.9,
+    "kind": "model",
+    "target": "bund",
+    "label": "一江一河",
+    "detail": false,
+    "shot": "s37_two_rivers_waterfront_glide"
+  },
+  {
+    "start": 437.9,
+    "end": 443.07,
+    "kind": "photo",
+    "target": "bund_from_swfc_bluehour.jpg",
+    "label": "两岸滨水风景",
+    "detail": false,
+    "shot": "s37_two_rivers_waterfront_glide"
+  },
+  {
+    "start": 443.07,
+    "end": 448.795,
+    "kind": "model",
+    "target": "skyline",
+    "label": "海纳百川",
+    "detail": false,
+    "shot": "s38_city_spirit_sky_ascend"
+  },
+  {
+    "start": 448.795,
+    "end": 454.52,
+    "kind": "photo",
+    "target": "bund_from_swfc_bluehour.jpg",
+    "label": "城市精神 · 江海气象",
+    "detail": false,
+    "shot": "s38_city_spirit_sky_ascend"
+  },
+  {
+    "start": 454.52,
+    "end": 465.92,
+    "kind": "cosmic",
+    "target": "",
+    "label": "江海城市",
+    "detail": false
+  }
+]
